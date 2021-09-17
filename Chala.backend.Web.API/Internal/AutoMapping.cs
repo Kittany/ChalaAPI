@@ -1,0 +1,21 @@
+﻿using AutoMapper;
+using Chala.backend.Infrastructure.Entities.DB;
+using Chala.backend.Infrastructure.Entities.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Chala.backend.Web.API.Internal
+{
+    public class AutoMapping : Profile
+    {
+        public AutoMapping()
+        {
+            CreateMap<UserDTOs.Create, User>();
+            CreateMap<UserDTOs.Edit, User>();
+            //    CreateMap<UserDTOs.Edit, User>();
+            //    CreateMap<UserDTOs.Edit, User>();
+        }
+    }
+}
