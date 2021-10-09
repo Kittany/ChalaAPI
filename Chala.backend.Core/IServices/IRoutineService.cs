@@ -11,11 +11,6 @@ namespace Chala.backend.Core.IServices
     {
         IEnumerable<Routine> GetAllAsQueryable();
         Routine GetById(Guid id);
-        int GetStartHour(Guid id);
-        int GetEndHour(Guid id);
-
-        //IEnumerable<string> GetAllTitles();
-        //IEnumerable<bool> GetWeekStatus();
 
     }
 }

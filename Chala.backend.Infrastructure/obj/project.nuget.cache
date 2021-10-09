@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KniaiGNYjZI6EYNnPn8A0VfLYVeKMiWIueEU0kOH+YyRn4Vm+hi1kUAS5PpB6tRdl0lbcg8r5mBnZbFX0gSSWA==",
+  "dgSpecHash": "PqKJezZNRQTR+yn/b6prBxM7yJ9Meo2qbwuKrYeVGMmAKMIAmT+Y7LLruEGZcws9kZNO4/sH/r3F8FXCGxXPxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512",

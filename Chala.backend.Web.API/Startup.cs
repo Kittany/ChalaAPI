@@ -19,6 +19,7 @@ namespace Chala.backend.Web.API
 {
     public class Startup
     {
+        // a
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,10 +37,14 @@ namespace Chala.backend.Web.API
             });
 
             services.AddDbContext<ChalaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("sqlCon"), b => b.MigrationsAssembly("Chala.backend.Data.SQL")));
-            
-            
+
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IUserService, UsersService>();
+            services.AddTransient<IEventService, EventService>();
+            services.AddTransient<IRoutineService, RoutineService>();
+            services.AddTransient<ITagService, TagService>();
+            services.AddTransient<ITodoTaskService, TodoTaskService>();
             services.AddAutoMapper(typeof(Startup));
 
             services.AddHttpContextAccessor();

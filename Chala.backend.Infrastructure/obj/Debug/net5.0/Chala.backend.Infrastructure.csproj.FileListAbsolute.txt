@@ -22,3 +22,15 @@ C:\Users\Mohamed\React\Native\Chala\Chala.backend.Infrastructure\obj\Debug\net5.
 C:\Users\Mohamed\React\Native\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.dll
 C:\Users\Mohamed\React\Native\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\ref\Chala.backend.Infrastructure.dll
 C:\Users\Mohamed\React\Native\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.pdb
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\bin\Debug\net5.0\Chala.backend.Infrastructure.deps.json
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\bin\Debug\net5.0\Chala.backend.Infrastructure.dll
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\bin\Debug\net5.0\ref\Chala.backend.Infrastructure.dll
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\bin\Debug\net5.0\Chala.backend.Infrastructure.pdb
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.AssemblyInfo.cs
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.dll
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\ref\Chala.backend.Infrastructure.dll
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.pdb

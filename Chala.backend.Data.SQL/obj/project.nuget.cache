@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "abnV8/kMR0OJfLd5rOtCAHxHYGLgm13AcuHs+kars7QCvQ28+S9C+TixOLGc8T9VPu8CfRGXT/wnKQNxWnLg8Q==",
+  "dgSpecHash": "5ajzZJ8V/P1x3Jg89zlr9kTNvyDdK06tp7PwdYRdXGsKsLbeOL2JN7ev/sAnxUyI4mns8zNIdIaGPJt2qxuojg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj",
+  "projectFilePath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

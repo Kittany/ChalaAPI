@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "blutp+SzQ0ygEFCQhmBixyKecTZizcwkvNsPOmqQzJvrIwqgwlwVWqtdGSVtzlyUZLYno1Xp5h+202+HvXKs1w==",
+  "dgSpecHash": "25icxwrNSbSQzjNOEclRiEarEEj37U6L1q9UP+IOat68y8G0VflPMAtfPMrkDs4j9XyN4HiVeFxI3jTma74OYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Web.API\\Chala.backend.Web.API.csproj",
+  "projectFilePath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Web.API\\Chala.backend.Web.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Mohamed\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

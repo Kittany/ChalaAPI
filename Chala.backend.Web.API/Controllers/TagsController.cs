@@ -17,17 +17,29 @@ namespace Chala.backend.Web.API.Controllers
 
         // We dont need Mapper for now
         //private readonly IMapper _mapper;
-        public TagsController(IMapper mapper)
+        public TagsController(IMapper mapper, ITagService tagService)
         {
+            _tagService = tagService;
             //_mapper = mapper;
         }
         [HttpGet]
-        [Route("GetAllTags/{Id}")]
-        public IActionResult GetAllTags(Guid id)
+        [Route("GetAllTags")]
+        public IActionResult GetAllTags()
         {
-            var res = _tagService.GetAllAsQueryable().ToList();
+            var res = _tagService.GetAllAsQueryable();
             return Ok(res);
         }
+        [HttpGet]
+        [Route("GetById/{Id}")]
+        public IActionResult GetById(Guid Id)
+        {
+            var res = _tagService.GetById(Id);
+            if (res != null)
+                return Ok(res);
+            else
+                return BadRequest("User not found.");
+        }
+
 
     }
 }

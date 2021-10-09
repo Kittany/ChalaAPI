@@ -38,11 +38,31 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Routines.GetById(id).EndHour;
         }
 
-        //public IEnumerable<bool> GetWeekStatus(Guid Id)
+        //public bool[] GetWeekStatus(Guid Id)
         //{
-        //    var routine = _unitOfWork.Routines.GetWeekStatus(Id);
+        //    var routine = _unitOfWork.Routines.GetById(Id);
+
+        //    bool[] temp = new bool[7];
+        //    int index = 0;
+        //    var booleanWeekObject = _unitOfWork.Routines
+        //     .Where(x => x.UserId == Id)
+        //     .Select(x => new  { x.Sunday, x.Monday, x.Tuesday, x.Wednesday, x.Thursday, x.Friday, x.Saturday })
+        //     .ToList();
+        //    foreach (var day in booleanWeekObject)
+        //    {
+        //        temp[index] = day;
+        //    }
         //    // if condition?
         //    return routine;
         //}
+
+        //    public IEnumerable<bool> GetWeekStatus(Guid id)
+        //    {
+        //        //_context.Routines.AsQueryable().Select()
+        //        var dataset = _context.Routines
+        //.Where(x => x.UserId == id)
+        //.Select(x => new { x.Sunday, x.Monday, x.Tuesday, x.Wednesday, x.Thursday, x.Friday, x.Saturday }).ToList();
+        //    }
+
     }
 }

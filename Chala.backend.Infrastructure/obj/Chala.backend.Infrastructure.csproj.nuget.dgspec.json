@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {}
+    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
         "projectName": "Chala.backend.Infrastructure",
-        "projectPath": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -14,8 +14,9 @@ namespace Chala.backend.Web.API.Internal
         {
             CreateMap<UserDTOs.Create, User>();
             CreateMap<UserDTOs.Edit, User>();
-            //    CreateMap<UserDTOs.Edit, User>();
-            //    CreateMap<UserDTOs.Edit, User>();
+
+            CreateMap<TodoTaskDTOs.Create, TodoTask>();
+            CreateMap<TodoTaskDTOs.Edit, TodoTask>();
         }
     }
 }

@@ -13,9 +13,14 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public string Title { get; set; }
         public int StartHour { get; set; }
         public int EndHour { get; set; }
+
+
         public DateTime Date { get; set; }
+        public bool IsActive { get; set; }
+
         public virtual User User { get; set; }
         public virtual Tag Tag { get; set; }
+
     }
 }
 

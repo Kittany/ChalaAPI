@@ -47,7 +47,7 @@ namespace Chala.backend.Services.Services
         public bool Create(User user)
         {
             user.IsActive = true;
-            user.RegisterDate = DateTime.Now;
+            user.CreateDate = DateTime.Now;
 
             //Hash the password using the Bcrypt library
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(user.Password);

@@ -26,23 +26,5 @@ namespace Chala.backend.Core.IRepositories
         {
             return _context.Routines.Where(s => s.Id == Id).FirstOrDefault();
         }
-
-        public IEnumerable<bool> GetWeekStatus(Guid id)
-        {
-            //_context.Routines.AsQueryable().Select()
-            var dataset = _context.Routines
-    .Where(x => x.UserId == id)
-    .Select(x => new { x.Sunday, x.Monday, x.Tuesday, x.Wednesday, x.Thursday, x.Friday, x.Saturday }).ToList();
-        }
-
-        public int GetStartHour(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetEndHour(Guid id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

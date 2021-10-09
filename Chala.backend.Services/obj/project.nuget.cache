@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mC5irtlr1PCvqXTWn5hipw3+MMS5/gm1rXHjBp0h8Jtz9+x4yCu1IuK6an09MqrFThEIxVk2LfChiEeBwdeuVg==",
+  "dgSpecHash": "XQ3GLPdYb72ouIs8ffSZItRyy9U7B6vMrxPZ0L3qD594VNFspqmxOUBQ1qGSK1NbA9YKCVA94yDKEgt09SJ3Sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mohamed\\React\\Native\\Chala\\Chala.backend.Services\\Chala.backend.Services.csproj",
+  "projectFilePath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Services\\Chala.backend.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

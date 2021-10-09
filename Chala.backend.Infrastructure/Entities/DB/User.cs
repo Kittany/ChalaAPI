@@ -14,7 +14,7 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime Birthdate { get; set; }
-        public DateTime RegisterDate { get; set; }
+        public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
         public virtual ICollection<TodoTask> Tasks { get; set; }
         public virtual ICollection<Routine> Routines { get; set; }
