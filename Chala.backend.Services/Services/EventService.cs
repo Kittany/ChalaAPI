@@ -27,19 +27,7 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Events.GetById(id);
         }
 
-        public int GetEndHour(Guid id)
-        {
-            return _unitOfWork.Events.GetById(id).EndHour;
-        }
-        public int GetStartHour(Guid id)
-        {
-            return _unitOfWork.Events.GetById(id).StartHour;
-        }
-
-        public DateTime GetEventDate(Guid id)
-        {
-            return _unitOfWork.Events.GetById(id).Date;
-        }
+      
 
     }
 }

@@ -28,41 +28,36 @@ namespace Chala.backend.Services.Services
 
 
 
-        public int GetEndHour(Guid id)
+        public bool Create(Routine routine)
         {
-            return _unitOfWork.Routines.GetById(id).StartHour;
+            _unitOfWork.Routines.Add(routine);
+            return _unitOfWork.Commit() > 0;
         }
 
-        public int GetStartHour(Guid id)
+        public bool Delete(Routine routine)
         {
-            return _unitOfWork.Routines.GetById(id).EndHour;
+            _unitOfWork.Routines.Remove(routine);
+            return _unitOfWork.Commit() > 0;
+
         }
 
-        //public bool[] GetWeekStatus(Guid Id)
-        //{
-        //    var routine = _unitOfWork.Routines.GetById(Id);
-
-        //    bool[] temp = new bool[7];
-        //    int index = 0;
-        //    var booleanWeekObject = _unitOfWork.Routines
-        //     .Where(x => x.UserId == Id)
-        //     .Select(x => new  { x.Sunday, x.Monday, x.Tuesday, x.Wednesday, x.Thursday, x.Friday, x.Saturday })
-        //     .ToList();
-        //    foreach (var day in booleanWeekObject)
-        //    {
-        //        temp[index] = day;
-        //    }
-        //    // if condition?
-        //    return routine;
-        //}
-
-        //    public IEnumerable<bool> GetWeekStatus(Guid id)
-        //    {
-        //        //_context.Routines.AsQueryable().Select()
-        //        var dataset = _context.Routines
-        //.Where(x => x.UserId == id)
-        //.Select(x => new { x.Sunday, x.Monday, x.Tuesday, x.Wednesday, x.Thursday, x.Friday, x.Saturday }).ToList();
-        //    }
+        public bool Edit(Routine oldRoutine, Routine newRoutine)
+        {
+            oldRoutine.Title = newRoutine.Title;
+            oldRoutine.StartHour = newRoutine.StartHour;
+            oldRoutine.EndHour = newRoutine.EndHour;
+            oldRoutine.Sunday = newRoutine.Sunday;
+            oldRoutine.Monday = newRoutine.Monday;
+            oldRoutine.Tuesday = newRoutine.Tuesday;
+            oldRoutine.Wednesday = newRoutine.Wednesday;
+            oldRoutine.Thursday = newRoutine.Thursday;
+            oldRoutine.Friday = newRoutine.Friday;
+            oldRoutine.Saturday = newRoutine.Saturday;
+            // MAYBE THIS IS USELESS
+            oldRoutine.IsActive = newRoutine.IsActive;
+            _unitOfWork.Routines.Update(oldRoutine);
+            return _unitOfWork.Commit() > 0;
+        }
 
     }
 }

@@ -25,14 +25,14 @@ namespace Chala.backend.Web.API.Controllers
         }
 
         [HttpGet]
-        [Route("GetAllTodoTask/{Id}")]
-        public IActionResult GetAllTodoTask(Guid Id)
+        [Route("GetAllTodoTask")]
+        public IActionResult GetAllTodoTask()
         {
             var todoTasks = _todoTaskService.GetAllAsQueryable();
             if (todoTasks != null)
                 return Ok(todoTasks);
-            else
-                return BadRequest("Empty TodoTasks");
+
+            return BadRequest("Empty TodoTasks");
         }
         [HttpGet]
         [Route("GetTodoTasksById/{Id}")]
@@ -41,8 +41,8 @@ namespace Chala.backend.Web.API.Controllers
             var todoTasks = _todoTaskService.GetById(Id);
             if (todoTasks != null)
                 return Ok(todoTasks);
-            else
-                return BadRequest("todoTask not found");
+
+            return BadRequest("todoTask not found");
         }
         [HttpPost]
         [Route("CreateTodoTask")]
@@ -59,11 +59,87 @@ namespace Chala.backend.Web.API.Controllers
 
                 return BadRequest("Failed to create a todoTask.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return BadRequest("Failed to create a todoTask.");
             }
 
         }
+        [HttpPost]
+        [Route("EditTodoTask/{Id}")]
+        public IActionResult EditTodoTask(Guid Id, [FromBody] TodoTaskDTOs.Edit newTodoTask)
+        {
+            try
+            {
+                bool res = false;
+                var todoLists = _todoTaskService.GetAllAsQueryable();
+                foreach (TodoTask todoTask in todoLists)
+                {
+                    if (todoTask.Id == Id)
+                    {
+                        var newEdittedTodoTask = _mapper.Map<TodoTask>(newTodoTask);
+                        res = _todoTaskService.Edit(todoTask, newEdittedTodoTask);
+                        break;
+                    }
+                }
+                if (res)
+                    return Ok("TodoTask has been edited.");
+
+                return BadRequest("Failed to edit the todoTask.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to edit the todoTask.");
+            }
+
+        }
+        [HttpPost]
+        [Route("DeleteTodoTask/{Id}")]
+        public IActionResult DeleteTodoTask(Guid Id)
+        {
+            try
+            {
+                bool res = false;
+                var todoTasks = _todoTaskService.GetAllAsQueryable();
+                foreach (TodoTask todoTask in todoTasks)
+                {
+                    if (todoTask.Id == Id)
+                    {
+                        res = _todoTaskService.Delete(todoTask);
+                        break;
+                    }
+                }
+
+                if (res)
+                    return Ok("TodoTask has been deleted.");
+
+                return BadRequest("Failed to delete the todoTask.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to delete the todoTask.");
+            }
+
+        }
+
+        //public IActionResult DeleteTodoTask([FromBody] TodoTaskDTOs.Create dto)
+        //{
+        //    try
+        //    {
+        //        var todoTask = _mapper.Map<TodoTask>(dto);
+
+        //        var res = _todoTaskService.Delete(todoTask);
+
+        //        if (res)
+        //            return Ok("TodoTask has been created.");
+
+        //        return BadRequest("Failed to create a todoTask.");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return BadRequest("Failed to create a todoTask.");
+        //    }
+
+        //}
     }
 }

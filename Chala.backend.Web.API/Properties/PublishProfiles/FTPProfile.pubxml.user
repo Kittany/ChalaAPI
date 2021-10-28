@@ -8,14 +8,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmdECRx1m8kGrlVlGl+S6xwAAAAACAAAAAAAQZgAAAAEAACAAAADmrGqNecFzoKfnNxd7lbB9LrMkwKnvaaUNg6Mfxv7MqgAAAAAOgAAAAAIAACAAAACv69U72XV1t1xB5tPwLn1eaN3zj4ZZyJiLgpwSen8iHCAAAAAgOk0cYWeRrJa8MY7gnFDRY28vYaWlVn86Ev7DDHyWykAAAABKoZ8RwWrADt2gZDdlsS1VZOJXCVp4In8YdBmRtYmHPADBAEp+IwoZ7vHZhjZjxtATC3l3pBwXz9njE4eBzYuX</EncryptedPassword>
     <_PublishTargetUrl>ftp://185.60.170.14/site22</_PublishTargetUrl>
-    <History>True|2021-09-17T12:26:39.4079540Z;</History>
+    <History>True|2021-10-16T17:39:57.0443545Z;True|2021-09-17T15:26:39.4079540+03:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
       <publishTime>09/02/2021 23:14:25</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>09/02/2021 23:14:25</publishTime>
+      <publishTime>10/16/2021 20:33:39</publishTime>
     </File>
     <File Include="AutoMapper.dll">
       <publishTime>10/16/2020 15:36:54</publishTime>
@@ -27,43 +27,43 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/19/2020 10:27:06</publishTime>
     </File>
     <File Include="Chala.backend.Core.dll">
-      <publishTime>09/17/2021 15:25:22</publishTime>
+      <publishTime>10/16/2021 20:39:34</publishTime>
     </File>
     <File Include="Chala.backend.Core.pdb">
-      <publishTime>09/17/2021 15:25:22</publishTime>
+      <publishTime>10/16/2021 20:39:34</publishTime>
     </File>
     <File Include="Chala.backend.Data.SQL.dll">
-      <publishTime>09/17/2021 15:25:25</publishTime>
+      <publishTime>10/16/2021 20:39:36</publishTime>
     </File>
     <File Include="Chala.backend.Data.SQL.pdb">
-      <publishTime>09/17/2021 15:25:25</publishTime>
+      <publishTime>10/16/2021 20:39:36</publishTime>
     </File>
     <File Include="Chala.backend.Infrastructure.dll">
-      <publishTime>09/17/2021 15:25:21</publishTime>
+      <publishTime>10/16/2021 20:39:32</publishTime>
     </File>
     <File Include="Chala.backend.Infrastructure.pdb">
-      <publishTime>09/17/2021 15:25:21</publishTime>
+      <publishTime>10/16/2021 20:39:32</publishTime>
     </File>
     <File Include="Chala.backend.Services.dll">
-      <publishTime>09/17/2021 15:25:24</publishTime>
+      <publishTime>10/16/2021 20:39:37</publishTime>
     </File>
     <File Include="Chala.backend.Services.pdb">
-      <publishTime>09/17/2021 15:25:24</publishTime>
+      <publishTime>10/16/2021 20:39:37</publishTime>
     </File>
     <File Include="Chala.backend.Web.API.deps.json">
-      <publishTime>09/17/2021 15:25:31</publishTime>
+      <publishTime>10/16/2021 20:39:44</publishTime>
     </File>
     <File Include="Chala.backend.Web.API.dll">
-      <publishTime>09/17/2021 15:25:27</publishTime>
+      <publishTime>10/16/2021 20:39:40</publishTime>
     </File>
     <File Include="Chala.backend.Web.API.exe">
-      <publishTime>09/17/2021 15:25:27</publishTime>
+      <publishTime>10/16/2021 20:39:40</publishTime>
     </File>
     <File Include="Chala.backend.Web.API.pdb">
-      <publishTime>09/17/2021 15:25:27</publishTime>
+      <publishTime>10/16/2021 20:39:40</publishTime>
     </File>
     <File Include="Chala.backend.Web.API.runtimeconfig.json">
-      <publishTime>09/17/2021 15:25:27</publishTime>
+      <publishTime>10/16/2021 20:39:40</publishTime>
     </File>
     <File Include="Microsoft.Data.SqlClient.dll">
       <publishTime>08/26/2020 02:24:48</publishTime>
@@ -159,7 +159,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2019 10:37:42</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>09/17/2021 15:25:31</publishTime>
+      <publishTime>10/16/2021 20:39:45</publishTime>
     </File>
   </ItemGroup>
 </Project>

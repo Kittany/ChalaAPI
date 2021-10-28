@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DB;
+using Chala.backend.Infrastructure.Entities.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -43,5 +44,55 @@ namespace Chala.backend.Web.API.Controllers
                 return BadRequest("Routine not found");
         }
 
+
+        [HttpPost]
+        [Route("EditRoutineById/{Id}")]
+        public IActionResult EditRoutineById([FromBody] RoutineDTOs.Edit newRoutine, Guid Id)
+        {
+            var res = false;
+            var routines = _routineService.GetAllAsQueryable();
+            foreach (Routine routine in routines)
+            {
+                if (routine.Id == Id)
+                {
+                    var newEdittedRoutine = _mapper.Map<Routine>(newRoutine);
+                    res = _routineService.Edit(routine, newEdittedRoutine);
+                    break;
+                }
+            }
+            if (res)
+                return Ok("Routine Has been edited.");
+            else
+                return BadRequest("Failed to edit the routine");
+        }
+
+
+        [HttpPost]
+        [Route("DeleteRoutineById/{Id}")]
+        public IActionResult DeleteRoutineById(Guid Id)
+        {
+            try
+            {
+                bool res = false;
+                var routines = _routineService.GetAllAsQueryable();
+                foreach (Routine routine in routines)
+                {
+                    if (routine.Id == Id)
+                    {
+                        res = _routineService.Delete(routine);
+                        break;
+                    }
+                }
+                if (res)
+                    return Ok("Routine has been deleted.");
+
+                return BadRequest("Failed to delete the Routine.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to delete the Routine.");
+            }
+
+        }
     }
 }

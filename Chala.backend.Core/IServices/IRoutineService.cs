@@ -11,6 +11,9 @@ namespace Chala.backend.Core.IServices
     {
         IEnumerable<Routine> GetAllAsQueryable();
         Routine GetById(Guid id);
+        public bool Edit(Routine oldRoutine, Routine newRoutine);
+        public bool Delete(Routine routine);
+        public bool Create(Routine routine);
 
     }
 }

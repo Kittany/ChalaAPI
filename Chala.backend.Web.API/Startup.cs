@@ -19,7 +19,6 @@ namespace Chala.backend.Web.API
 {
     public class Startup
     {
-        // a
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
