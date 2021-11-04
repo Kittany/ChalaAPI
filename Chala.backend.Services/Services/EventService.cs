@@ -27,6 +27,7 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Events.GetById(id);
         }
 
+        
       
 
     }

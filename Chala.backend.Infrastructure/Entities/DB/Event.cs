@@ -16,8 +16,6 @@ namespace Chala.backend.Infrastructure.Entities.DB
 
 
         public DateTime Date { get; set; }
-        public bool IsActive { get; set; }
-
         public virtual User User { get; set; }
         public virtual Tag Tag { get; set; }
 

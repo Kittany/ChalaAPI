@@ -16,7 +16,6 @@ namespace Chala.backend.Core.IRepositories
         {
 
         }
-        // delete this func
         public IEnumerable<User> GetAllAsQueryable()
         {
             return _context.Users.AsQueryable();
