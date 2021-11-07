@@ -11,5 +11,8 @@ namespace Chala.backend.Core.IServices
     {
         IEnumerable<Event> GetAllAsQueryable();
         Event GetById(Guid id);
+        public bool Edit(Event oldEvent, Event newEvent);
+        public bool Delete(Event e);
+        public bool Create(Event e);
     }
 }

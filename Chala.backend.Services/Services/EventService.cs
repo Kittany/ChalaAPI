@@ -27,8 +27,34 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Events.GetById(id);
         }
 
-        
-      
+
+
+        public bool Create(Event e)
+        {
+            _unitOfWork.Events.Add(e);
+            return _unitOfWork.Commit() > 0;
+        }
+
+        public bool Delete(Event e)
+        {
+            _unitOfWork.Events.Remove(e);
+            return _unitOfWork.Commit() > 0;
+
+        }
+
+        public bool Edit(Event oldEvent, Event newEvent)
+        {
+
+            oldEvent.Title = newEvent.Title;
+            oldEvent.StartHour = newEvent.StartHour;
+            oldEvent.EndHour = newEvent.EndHour;
+            oldEvent.Date = newEvent.Date;
+
+            _unitOfWork.Events.Update(oldEvent);
+            return _unitOfWork.Commit() > 0;
+        }
+
+
 
     }
 }

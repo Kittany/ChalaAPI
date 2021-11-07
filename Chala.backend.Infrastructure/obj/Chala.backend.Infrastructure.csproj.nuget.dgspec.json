@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {}
+    "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+    "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
         "projectName": "Chala.backend.Infrastructure",
-        "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Hakam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hakam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
