@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "LfCS4B7GIJwUSJYJGBW2B3EvBLj4LkEab/BQ3Rj2wJAVV9PYckwCcSqdUQI7rm+RnK3eeyf49Ux9OiHUkP+Kww==",
+  "dgSpecHash": "PqKJezZNRQTR+yn/b6prBxM7yJ9Meo2qbwuKrYeVGMmAKMIAmT+Y7LLruEGZcws9kZNO4/sH/r3F8FXCGxXPxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Hakam\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
-    "C:\\Users\\Hakam\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512",
-    "C:\\Users\\Hakam\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\microsoft.identitymodel.logging.6.12.2.nupkg.sha512",
-    "C:\\Users\\Hakam\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\microsoft.identitymodel.tokens.6.12.2.nupkg.sha512",
-    "C:\\Users\\Hakam\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\system.identitymodel.tokens.jwt.6.12.2.nupkg.sha512",
-    "C:\\Users\\Hakam\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+    "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512",
+    "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\microsoft.identitymodel.logging.6.12.2.nupkg.sha512",
+    "C:\\Users\\Mohamed\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\microsoft.identitymodel.tokens.6.12.2.nupkg.sha512",
+    "C:\\Users\\Mohamed\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\system.identitymodel.tokens.jwt.6.12.2.nupkg.sha512",
+    "C:\\Users\\Mohamed\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

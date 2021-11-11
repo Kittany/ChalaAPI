@@ -71,18 +71,10 @@ namespace Chala.backend.Web.API.Controllers
         {
             try
             {
-                bool res = false;
-                var todoLists = _todoTaskService.GetAllAsQueryable();
-                foreach (TodoTask todoTask in todoLists)
-                {
-                    if (todoTask.Id == Id)
-                    {
-                        var newEdittedTodoTask = _mapper.Map<TodoTask>(newTodoTask);
-                        res = _todoTaskService.Edit(todoTask, newEdittedTodoTask);
-                        break;
-                    }
-                }
-                if (res)
+                var prevTodoTask = _todoTaskService.GetById(Id);
+                var newEdittedTodoTask = _mapper.Map<TodoTask>(newTodoTask);
+
+                if (_todoTaskService.Edit(prevTodoTask, newEdittedTodoTask))
                     return Ok("TodoTask has been edited.");
 
                 return BadRequest("Failed to edit the todoTask.");
@@ -99,18 +91,9 @@ namespace Chala.backend.Web.API.Controllers
         {
             try
             {
-                bool res = false;
-                var todoTasks = _todoTaskService.GetAllAsQueryable();
-                foreach (TodoTask todoTask in todoTasks)
-                {
-                    if (todoTask.Id == Id)
-                    {
-                        res = _todoTaskService.Delete(todoTask);
-                        break;
-                    }
-                }
+                var todoTask = _todoTaskService.GetById(Id);
 
-                if (res)
+                if (_todoTaskService.Delete(todoTask))
                     return Ok("TodoTask has been deleted.");
 
                 return BadRequest("Failed to delete the todoTask.");
@@ -121,25 +104,5 @@ namespace Chala.backend.Web.API.Controllers
             }
 
         }
-
-        //public IActionResult DeleteTodoTask([FromBody] TodoTaskDTOs.Create dto)
-        //{
-        //    try
-        //    {
-        //        var todoTask = _mapper.Map<TodoTask>(dto);
-
-        //        var res = _todoTaskService.Delete(todoTask);
-
-        //        if (res)
-        //            return Ok("TodoTask has been created.");
-
-        //        return BadRequest("Failed to create a todoTask.");
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return BadRequest("Failed to create a todoTask.");
-        //    }
-
-        //}
     }
 }

@@ -16,6 +16,7 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public DateTime Birthdate { get; set; }
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
+        public bool IsVerified { get; set; }
         public virtual ICollection<TodoTask> Tasks { get; set; }
         public virtual ICollection<Routine> Routines { get; set; }
         public virtual ICollection<Event> Events { get; set; }

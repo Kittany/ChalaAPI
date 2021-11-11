@@ -309,19 +309,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hakam\\.nuget\\packages\\": {}
+    "C:\\Users\\Mohamed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Core\\Chala.backend.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj",
       "projectName": "Chala.backend.Core",
-      "projectPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Core\\Chala.backend.Core.csproj",
-      "packagesPath": "C:\\Users\\Hakam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Core\\obj\\",
+      "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj",
+      "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hakam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -335,8 +335,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
+            "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
             }
           }
         }

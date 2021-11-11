@@ -21,7 +21,7 @@ namespace Chala.backend.Web.API.Internal
             CreateMap<RoutineDTOs.Create, Routine>();
             CreateMap<RoutineDTOs.Edit, Routine>();
 
-           // CreateMap<EventDTOs.Create, Event>();
+            //CreateMap<EventDTOs.Create, Event>();
             CreateMap<EventDTOs.Edit, Event>();
         }
     }

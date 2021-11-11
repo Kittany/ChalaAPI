@@ -47,19 +47,14 @@ namespace Chala.backend.Web.API.Controllers
 
         [HttpPost]
         [Route("EditRoutineById/{Id}")]
-        public IActionResult EditRoutineById([FromBody] RoutineDTOs.Edit newRoutine, Guid Id)
+        public IActionResult EditRoutineById(Guid Id, [FromBody] RoutineDTOs.Edit newRoutine)
         {
-            var res = false;
-            var routines = _routineService.GetAllAsQueryable();
-            foreach (Routine routine in routines)
-            {
-                if (routine.Id == Id)
-                {
-                    var newEdittedRoutine = _mapper.Map<Routine>(newRoutine);
-                    res = _routineService.Edit(routine, newEdittedRoutine);
-                    break;
-                }
-            }
+            // Add Routine != null <->
+            var routine = _routineService.GetById(Id);
+
+            var newEdittedRoutine = _mapper.Map<Routine>(newRoutine);
+            res = _routineService.Edit(routine, newEdittedRoutine);
+
             if (res)
                 return Ok("Routine Has been edited.");
             else

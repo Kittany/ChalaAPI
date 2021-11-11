@@ -13,9 +13,9 @@ namespace Chala.backend.Web.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    // Add get the events of a specific user
     public class EventController : ControllerBase
     {
+        // Add CreateEvent action.
         private readonly IEventService _eventService;
         private readonly IMapper _mapper;
 
@@ -49,20 +49,14 @@ namespace Chala.backend.Web.API.Controllers
 
         [HttpPost]
         [Route("EditEventById/{Id}")]
-        public IActionResult EditEventById([FromBody] EventDTOs.Edit newEvent, Guid Id)
+        public IActionResult EditEventById(Guid Id, [FromBody] EventDTOs.Edit newEvent)
         {
-            var res = false;
-            var events = _eventService.GetAllAsQueryable();
-            foreach (Event e in events)
-            {
-                if (e.Id == Id)
-                {
-                    var newEdittedEvent = _mapper.Map<Event>(newEvent);
-                    res = _eventService.Edit(e, newEdittedEvent);
-                    break;
-                }
-            }
-            if (res)
+            // Check if prevEvent != null <->
+            var prevEvent = _eventService.GetById(Id);
+
+            var newEdittedEvent = _mapper.Map<Event>(newEvent);
+
+            if (_eventService.Edit(prevEvent, newEdittedEvent))
                 return Ok("Event Has been edited.");
             else
                 return BadRequest("Failed to edit the event");
@@ -75,24 +69,15 @@ namespace Chala.backend.Web.API.Controllers
         {
             try
             {
-                bool res = false;
-                var events = _eventService.GetAllAsQueryable();
-                foreach (Event e in events)
-                {
-                    if (e.Id == Id)
-                    {
-                        res = _eventService.Delete(e);
-                        break;
-                    }
-                }
-                if (res)
-                    return Ok("Routine has been deleted.");
+                var _event = _eventService.GetById(Id);
+                if (_eventService.Delete(_event))
+                    return Ok("Event has been deleted.");
 
-                return BadRequest("Failed to delete the Routine.");
+                return BadRequest("Failed to delete the Event.");
             }
             catch (Exception)
             {
-                return BadRequest("Failed to delete the Routine.");
+                return BadRequest("Failed to delete the Event.");
             }
 
         }

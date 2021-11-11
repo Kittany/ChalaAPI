@@ -16,6 +16,15 @@ namespace Chala.backend.Services.Services
         {
             _unitOfWork = unitOfWork;
         }
+        public IEnumerable<TodoTask> GetAllAsQueryable()
+        {
+            return _unitOfWork.TodoTasks.GetAllAsQueryable();
+        }
+
+        public TodoTask GetById(Guid Id)
+        {
+            return _unitOfWork.TodoTasks.GetById(Id);
+        }
         public bool Create(TodoTask todoTask)
         {
             _unitOfWork.TodoTasks.Add(todoTask);
@@ -34,20 +43,6 @@ namespace Chala.backend.Services.Services
             oldTodoTask.Title = newTodoTask.Title;
             _unitOfWork.TodoTasks.Update(oldTodoTask);
             return _unitOfWork.Commit() > 0;
-        }
-
-        public IEnumerable<TodoTask> GetAllAsQueryable()
-        {
-            return _unitOfWork.TodoTasks.GetAllAsQueryable();
-
-
-
-
-        }
-
-        public TodoTask GetById(Guid Id)
-        {
-            return _unitOfWork.TodoTasks.GetById(Id);
         }
     }
 }

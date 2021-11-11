@@ -371,19 +371,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hakam\\.nuget\\packages\\": {}
+    "C:\\Users\\Mohamed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Services\\Chala.backend.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Services\\Chala.backend.Services.csproj",
       "projectName": "Chala.backend.Services",
-      "projectPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Services\\Chala.backend.Services.csproj",
-      "packagesPath": "C:\\Users\\Hakam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Services\\obj\\",
+      "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Services\\Chala.backend.Services.csproj",
+      "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hakam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -397,11 +397,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Core\\Chala.backend.Core.csproj": {
-              "projectPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Core\\Chala.backend.Core.csproj"
+            "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj": {
+              "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj"
             },
-            "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Hakam\\Source\\Repos\\ChalaAPI\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
+            "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
             }
           }
         }

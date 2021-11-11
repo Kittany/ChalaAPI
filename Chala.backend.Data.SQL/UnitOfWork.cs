@@ -1,5 +1,6 @@
 ﻿using Chala.backend.Core;
 using Chala.backend.Core.IRepositories;
+using Chala.backend.Data.SQL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
