@@ -10,6 +10,7 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public Guid UserId { get; set; }
         [ForeignKey("Tag")]
         public Guid TagId { get; set; }
+
         public string Title { get; set; }
         public int StartHour { get; set; }
         public int EndHour { get; set; }

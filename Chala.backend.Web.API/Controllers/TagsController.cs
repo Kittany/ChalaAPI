@@ -14,8 +14,6 @@ namespace Chala.backend.Web.API.Controllers
     public class TagsController : ControllerBase
     {
         private readonly ITagService _tagService;
-
-        // We dont need Mapper for now
         //private readonly IMapper _mapper;
         public TagsController(IMapper mapper, ITagService tagService)
         {

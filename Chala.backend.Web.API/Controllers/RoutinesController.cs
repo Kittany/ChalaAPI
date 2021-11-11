@@ -15,6 +15,7 @@ namespace Chala.backend.Web.API.Controllers
     [ApiController]
     public class RoutinesController : ControllerBase
     {
+        // Add Create Routine action.
         private readonly IMapper _mapper;
         private readonly IRoutineService _routineService;
 
@@ -50,12 +51,10 @@ namespace Chala.backend.Web.API.Controllers
         public IActionResult EditRoutineById(Guid Id, [FromBody] RoutineDTOs.Edit newRoutine)
         {
             // Add Routine != null <->
-            var routine = _routineService.GetById(Id);
-
+            var prevRoutine = _routineService.GetById(Id);
             var newEdittedRoutine = _mapper.Map<Routine>(newRoutine);
-            res = _routineService.Edit(routine, newEdittedRoutine);
 
-            if (res)
+            if (_routineService.Edit(prevRoutine, newEdittedRoutine))
                 return Ok("Routine Has been edited.");
             else
                 return BadRequest("Failed to edit the routine");
@@ -68,17 +67,9 @@ namespace Chala.backend.Web.API.Controllers
         {
             try
             {
-                bool res = false;
-                var routines = _routineService.GetAllAsQueryable();
-                foreach (Routine routine in routines)
-                {
-                    if (routine.Id == Id)
-                    {
-                        res = _routineService.Delete(routine);
-                        break;
-                    }
-                }
-                if (res)
+                var routine = _routineService.GetById(Id);
+
+                if (_routineService.Delete(routine))
                     return Ok("Routine has been deleted.");
 
                 return BadRequest("Failed to delete the Routine.");

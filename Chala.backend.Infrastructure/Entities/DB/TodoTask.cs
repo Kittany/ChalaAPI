@@ -9,6 +9,8 @@ namespace Chala.backend.Infrastructure.Entities.DB
         [ForeignKey("User")]
         public Guid UserId { get; set; }
         public string Title { get; set; }
+
+
         public virtual User User { get; set; }
 
     }

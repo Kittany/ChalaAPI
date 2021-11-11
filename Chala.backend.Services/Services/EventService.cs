@@ -16,7 +16,6 @@ namespace Chala.backend.Services.Services
         {
             _unitOfWork = unitOfWork;
         }
-        // GET ALL EVENTS <---- 
         public IEnumerable<Event> GetAllAsQueryable()
         {
             return _unitOfWork.Events.GetAllAsQueryable();
@@ -44,7 +43,6 @@ namespace Chala.backend.Services.Services
 
         public bool Edit(Event oldEvent, Event newEvent)
         {
-
             oldEvent.Title = newEvent.Title;
             oldEvent.StartHour = newEvent.StartHour;
             oldEvent.EndHour = newEvent.EndHour;

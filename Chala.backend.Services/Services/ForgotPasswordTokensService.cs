@@ -16,7 +16,6 @@ namespace Chala.backend.Services.Services
         {
             _unitOfWork = unitOfWork;
         }
-        // GET ALL EVENTS <---- 
         public IEnumerable<ForgotPasswordTokens> GetAllAsQueryable()
         {
             return _unitOfWork.ForgotPasswordTokens.GetAllAsQueryable();
