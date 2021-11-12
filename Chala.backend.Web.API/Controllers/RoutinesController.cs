@@ -45,14 +45,34 @@ namespace Chala.backend.Web.API.Controllers
                 return BadRequest("Routine not found");
         }
 
+        [HttpPost]
+        [Route("CreateRoutine")]
+        public IActionResult CreateRoutine([FromBody] RoutineDTOs.Create dto)
+        {
+            try
+            {
+                var routine = _mapper.Map<Routine>(dto);
+                var res = _routineService.Create(routine);
+
+                if (res)
+                    return Ok("Routine has been created.");
+
+                return BadRequest("Failed to create a routine.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to create a rotuine.");
+            }
+        }
+
 
         [HttpPost]
         [Route("EditRoutineById/{Id}")]
-        public IActionResult EditRoutineById(Guid Id, [FromBody] RoutineDTOs.Edit newRoutine)
+        public IActionResult EditRoutineById(Guid Id, [FromBody] RoutineDTOs.Edit dto)
         {
             // Add Routine != null <->
             var prevRoutine = _routineService.GetById(Id);
-            var newEdittedRoutine = _mapper.Map<Routine>(newRoutine);
+            var newEdittedRoutine = _mapper.Map<Routine>(dto);
 
             if (_routineService.Edit(prevRoutine, newEdittedRoutine))
                 return Ok("Routine Has been edited.");

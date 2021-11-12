@@ -67,12 +67,12 @@ namespace Chala.backend.Web.API.Controllers
         }
         [HttpPost]
         [Route("EditTodoTask/{Id}")]
-        public IActionResult EditTodoTask(Guid Id, [FromBody] TodoTaskDTOs.Edit newTodoTask)
+        public IActionResult EditTodoTask(Guid Id, [FromBody] TodoTaskDTOs.Edit dto)
         {
             try
             {
                 var prevTodoTask = _todoTaskService.GetById(Id);
-                var newEdittedTodoTask = _mapper.Map<TodoTask>(newTodoTask);
+                var newEdittedTodoTask = _mapper.Map<TodoTask>(dto);
 
                 if (_todoTaskService.Edit(prevTodoTask, newEdittedTodoTask))
                     return Ok("TodoTask has been edited.");

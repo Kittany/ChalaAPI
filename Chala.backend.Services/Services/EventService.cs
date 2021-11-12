@@ -26,6 +26,10 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Events.GetById(id);
         }
 
+        public IEnumerable<Event> GetEventsByDate(DateTime dateTime)
+        {
+            return _unitOfWork.Events.Where(e => e.Date.Day == dateTime.Day);
+        }
 
 
         public bool Create(Event e)
@@ -51,8 +55,5 @@ namespace Chala.backend.Services.Services
             _unitOfWork.Events.Update(oldEvent);
             return _unitOfWork.Commit() > 0;
         }
-
-
-
     }
 }

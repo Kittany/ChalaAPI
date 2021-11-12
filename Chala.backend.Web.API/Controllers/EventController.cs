@@ -15,7 +15,6 @@ namespace Chala.backend.Web.API.Controllers
     [ApiController]
     public class EventController : ControllerBase
     {
-        // Add CreateEvent action.
         private readonly IEventService _eventService;
         private readonly IMapper _mapper;
 
@@ -46,15 +45,46 @@ namespace Chala.backend.Web.API.Controllers
                 return BadRequest("Invalid Id / Empty event");
         }
 
+        [HttpGet]
+        [Route("GetEventsByDate")]
+        public IActionResult GetEventsByDate([FromBody] DateTime dateTime)
+        {
+            var events = _eventService.GetEventsByDate(dateTime);
+            if (events != null)
+                return Ok(events);
+            else
+                return BadRequest("Empty events");
+        }
+
+        [HttpPost]
+        [Route("CreateEvent")]
+        public IActionResult CreateEvent([FromBody] EventDTOs.Create dto)
+        {
+            try
+            {
+                var eventt = _mapper.Map<Event>(dto);
+                var res = _eventService.Create(eventt);
+
+                if (res)
+                    return Ok("Event has been created.");
+
+                return BadRequest("Failed to create an event.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to create an event.");
+            }
+        }
+
 
         [HttpPost]
         [Route("EditEventById/{Id}")]
-        public IActionResult EditEventById(Guid Id, [FromBody] EventDTOs.Edit newEvent)
+        public IActionResult EditEventById(Guid Id, [FromBody] EventDTOs.Edit dto)
         {
             // Check if prevEvent != null <->
             var prevEvent = _eventService.GetById(Id);
 
-            var newEdittedEvent = _mapper.Map<Event>(newEvent);
+            var newEdittedEvent = _mapper.Map<Event>(dto);
 
             if (_eventService.Edit(prevEvent, newEdittedEvent))
                 return Ok("Event Has been edited.");

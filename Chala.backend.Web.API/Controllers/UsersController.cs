@@ -37,7 +37,7 @@ namespace Chala.backend.Web.API.Controllers
 
 
         [HttpGet]
-        [Route("GetById/{Id}")]
+        [Route("GetUserById/{Id}")]
         public IActionResult GetById(Guid Id)
         {
             return Ok(_userService.GetById(Id));
@@ -70,7 +70,40 @@ namespace Chala.backend.Web.API.Controllers
             {
                 return BadRequest("Something went wrong!");
             }
+        }
 
+        [HttpPost]
+        [Route("EditUserById/{Id}")]
+        public IActionResult EditUserById(Guid Id, [FromBody] UserDTOs.Edit dto)
+        {
+            // Add User != null <->
+            var prevUser = _userService.GetById(Id);
+            var newEdittedUser = _mapper.Map<User>(dto);
+
+            if (_userService.Edit(prevUser, newEdittedUser))
+                return Ok("User Has been edited.");
+            else
+                return BadRequest("Failed to edit the user");
+        }
+
+
+        [HttpPost]
+        [Route("DeleteUserById/{Id}")]
+        public IActionResult DeleteUserById(Guid Id)
+        {
+            try
+            {
+                var user = _userService.GetById(Id);
+
+                if (_userService.Delete(user))
+                    return Ok("user has been deleted.");
+
+                return BadRequest("Failed to delete the user.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to delete the user.");
+            }
 
         }
 

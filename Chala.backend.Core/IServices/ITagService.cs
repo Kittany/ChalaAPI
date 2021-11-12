@@ -9,6 +9,8 @@ namespace Chala.backend.Core.IServices
 {
     public interface ITagService
     {
+        bool Create(Tag tag);
+
         IEnumerable<Tag> GetAllAsQueryable();
         Tag GetById(Guid id);
     }

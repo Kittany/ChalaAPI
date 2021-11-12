@@ -28,14 +28,14 @@ namespace Chala.backend.Web.API.Controllers
             return Ok(res);
         }
         [HttpGet]
-        [Route("GetById/{Id}")]
+        [Route("GetTagById/{Id}")]
         public IActionResult GetById(Guid Id)
         {
             var res = _tagService.GetById(Id);
             if (res != null)
                 return Ok(res);
             else
-                return BadRequest("User not found.");
+                return BadRequest("Tag not found.");
         }
 
 

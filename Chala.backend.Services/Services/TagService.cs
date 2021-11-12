@@ -16,6 +16,7 @@ namespace Chala.backend.Services.Services
         {
             _unitOfWork = unitOfWork;
         }
+
         public IEnumerable<Tag> GetAllAsQueryable()
         {
             return _unitOfWork.Tags.GetAllAsQueryable();
@@ -24,6 +25,11 @@ namespace Chala.backend.Services.Services
         public Tag GetById(Guid Id)
         {
             return _unitOfWork.Tags.GetById(Id);
+        }
+        public bool Create(Tag tag)
+        {
+            _unitOfWork.Tags.Add(tag);
+            return _unitOfWork.Commit() > 0;
         }
 
     }
