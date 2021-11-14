@@ -1,6 +1,7 @@
 ﻿using Chala.backend.Core;
 using Chala.backend.Core.IRepositories;
 using Chala.backend.Data.SQL.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Chala.backend.Data.SQL
         private ITodoTaskRepository _todoTaskRepository;
         private ITagRepository _tagRepository;
         private IForgotPasswordTokensRepository _forgotPasswordTokensRepository;
-
+        private IVerificationCodesRepository _verificationCodes;
 
 
 
@@ -38,6 +39,7 @@ namespace Chala.backend.Data.SQL
 
         public ITagRepository Tags => _tagRepository ??= new TagRepository(_context);
         public IForgotPasswordTokensRepository ForgotPasswordTokens => _forgotPasswordTokensRepository ??= new ForgotPasswordTokensRepository(_context);
+        public IVerificationCodesRepository VerificationCodes => _verificationCodes ??= new VerificationCodesRepository(_context);
 
 
         public int Commit()

@@ -35,7 +35,6 @@ namespace Chala.backend.Web.API.Controllers
             return Ok(res);
         }
 
-
         [HttpGet]
         [Route("GetUserById/{Id}")]
         public IActionResult GetById(Guid Id)

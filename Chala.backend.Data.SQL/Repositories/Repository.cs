@@ -21,6 +21,7 @@ namespace Chala.backend.Data.SQL.Repositories
         public void Add(TEntity entity)
         {
             Context.Set<TEntity>().Add(entity);
+            
         }
 
         public async Task AddAsync(TEntity entity)

@@ -16,6 +16,7 @@ namespace Chala.backend.Core
         ITodoTaskRepository TodoTasks { get; }
         ITagRepository Tags { get; }
         IForgotPasswordTokensRepository ForgotPasswordTokens { get; }
+        IVerificationCodesRepository VerificationCodes { get; }
 
         int Commit();
     }

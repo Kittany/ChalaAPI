@@ -49,6 +49,11 @@ C:\Users\Hakam\Source\Repos\ChalaAPI\Chala.backend.Services\obj\Debug\net5.0\Cha
 C:\Users\Hakam\Source\Repos\ChalaAPI\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.dll
 C:\Users\Hakam\Source\Repos\ChalaAPI\Chala.backend.Services\obj\Debug\net5.0\ref\Chala.backend.Services.dll
 C:\Users\Hakam\Source\Repos\ChalaAPI\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.pdb
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.csproj.AssemblyReference.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.AssemblyInfoInputs.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.AssemblyInfo.cs
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.csproj.CoreCompileInputs.cache
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\Chala.backend.Services.deps.json
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\Chala.backend.Services.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\ref\Chala.backend.Services.dll
@@ -57,12 +62,6 @@ C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\Chala.backend.Infrastructure.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\Chala.backend.Core.pdb
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\bin\Debug\net5.0\Chala.backend.Infrastructure.pdb
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.csproj.AssemblyReference.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.AssemblyInfoInputs.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.AssemblyInfo.cs
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.csproj.CoreCompileInputs.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.csproj.CopyComplete
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\ref\Chala.backend.Services.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.pdb

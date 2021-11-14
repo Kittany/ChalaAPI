@@ -265,8 +265,8 @@ C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\s
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\staticwebassets\Chala.backend.Web.API.StaticWebAssets.xml
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\scopedcss\bundle\Chala.backend.Web.API.styles.css
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\Chala.backend.Web.API.RazorTargetAssemblyInfo.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\Chala.backend.Web.API.csproj.CopyComplete
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\Chala.backend.Web.API.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\ref\Chala.backend.Web.API.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\Chala.backend.Web.API.pdb
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\Chala.backend.Web.API.genruntimeconfig.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Debug\net5.0\Chala.backend.Web.API.csproj.CopyComplete
