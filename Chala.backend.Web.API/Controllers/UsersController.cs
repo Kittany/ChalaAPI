@@ -39,7 +39,22 @@ namespace Chala.backend.Web.API.Controllers
         [Route("GetUserById/{Id}")]
         public IActionResult GetById(Guid Id)
         {
-            return Ok(_userService.GetById(Id));
+
+            var res = _userService.GetById(Id);
+
+            if (res == null)
+                return BadRequest("User does not exist.");
+
+
+            return Ok(new { 
+            id = res.Id,
+            firstName = res.FirstName,
+            lastName = res.LastName,
+            birthDate = res.Birthdate,
+            createDate = res.CreateDate,
+            isActive = res.IsActive,
+            isVerified = res.IsVerified
+            });
         }
 
 
@@ -75,8 +90,12 @@ namespace Chala.backend.Web.API.Controllers
         [Route("EditUserById/{Id}")]
         public IActionResult EditUserById(Guid Id, [FromBody] UserDTOs.Edit dto)
         {
-            // Add User != null <->
+           
             var prevUser = _userService.GetById(Id);
+
+            if (prevUser == null)
+                return BadRequest("User does not exist.");
+
             var newEdittedUser = _mapper.Map<User>(dto);
 
             if (_userService.Edit(prevUser, newEdittedUser))

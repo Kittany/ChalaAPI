@@ -20,12 +20,6 @@ namespace Chala.backend.Services.Services
         }
 
 
-        // Remove this later
-        public IEnumerable<VerificationCodes> GetAllAsQueryable()
-        {
-            return _unitOfWork.VerificationCodes.GetAllAsQueryable();
-        }
-
         public VerificationCodes GetById(Guid id)
         {
             return _unitOfWork.VerificationCodes.GetById(id);
@@ -38,12 +32,12 @@ namespace Chala.backend.Services.Services
 
             var user = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Email == email);
             if (user == null)
-                _unitOfWork.VerificationCodes.Add(new VerificationCodes { User = _unitOfWork.Users.SingleOrDefault(u => u.Email == email), VerifiedCode = code }
+                _unitOfWork.VerificationCodes.Add(new VerificationCodes { User = _unitOfWork.Users.SingleOrDefault(u => u.Email == email), VerificationCode = code }
                 );
 
 
 
-            if (user != null) user.VerifiedCode = code;
+            if (user != null) user.VerificationCode = code;
 
 
             StaticFunctions.SendVerificationCodeToUserEmail(email, userData.FirstName, code);
@@ -56,7 +50,7 @@ namespace Chala.backend.Services.Services
             var user = _unitOfWork.Users.SingleOrDefault(u => u.Email == email);
             if (user == null) return false;
 
-            var res = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Id == user.Id && u.VerifiedCode == code );
+            var res = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Id == user.Id && u.VerificationCode == code );
 
 
             return res != null;
