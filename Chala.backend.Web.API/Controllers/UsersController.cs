@@ -2,6 +2,7 @@
 using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DB;
 using Chala.backend.Infrastructure.Entities.DTOs;
+using Chala.backend.Web.API.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace Chala.backend.Web.API.Controllers
         }
 
 
+
         [HttpPost]
         [Route("Authorize")]
         public IActionResult Authorize([FromBody] UserCredintials userCredintials)
@@ -35,6 +37,16 @@ namespace Chala.backend.Web.API.Controllers
             return Ok(res);
         }
 
+        [Authorize]
+        [HttpGet]
+        [Route("IsLoggedIn")]
+        public IActionResult IsLoggedIn()
+        {
+            return Ok();
+        }
+
+
+        [Authorize]
         [HttpGet]
         [Route("GetUserById/{Id}")]
         public IActionResult GetById(Guid Id)
@@ -58,7 +70,7 @@ namespace Chala.backend.Web.API.Controllers
         }
 
 
-
+        [Authorize]
         [HttpPost]
         [Route("Create")]
         public IActionResult Create([FromBody] UserDTOs.Create dto)
@@ -86,6 +98,7 @@ namespace Chala.backend.Web.API.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         [Route("EditUserById/{Id}")]
         public IActionResult EditUserById(Guid Id, [FromBody] UserDTOs.Edit dto)
@@ -104,7 +117,7 @@ namespace Chala.backend.Web.API.Controllers
                 return BadRequest("Failed to edit the user");
         }
 
-
+        [Authorize]
         [HttpPost]
         [Route("DeleteUserById/{Id}")]
         public IActionResult DeleteUserById(Guid Id)

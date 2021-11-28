@@ -16,7 +16,7 @@ namespace Chala.backend.Data.SQL.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Event", b =>
@@ -148,6 +148,9 @@ namespace Chala.backend.Data.SQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("IsFinished")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -202,10 +205,10 @@ namespace Chala.backend.Data.SQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("UserId")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("VerifiedCode")
+                    b.Property<string>("VerificationCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -278,8 +281,10 @@ namespace Chala.backend.Data.SQL.Migrations
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.VerificationCodes", b =>
                 {
                     b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
+                        .WithMany("VerificationCodes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -291,6 +296,8 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.Navigation("Routines");
 
                     b.Navigation("Tasks");
+
+                    b.Navigation("VerificationCodes");
                 });
 #pragma warning restore 612, 618
         }

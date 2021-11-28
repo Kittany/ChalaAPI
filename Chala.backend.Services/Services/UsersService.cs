@@ -38,12 +38,8 @@ namespace Chala.backend.Services.Services
             if (res)
                 return StaticFunctions.GenerateJwtToken(user.Id);
 
-
-
             return "";
         }
-
-
         public bool Create(User user)
         {
             user.IsActive = true;

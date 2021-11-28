@@ -10,3 +10,15 @@ C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Release
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Release\net5.0\ref\Chala.backend.Infrastructure.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.pdb
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\bin\Release\net5.0\Chala.backend.Infrastructure.deps.json
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\bin\Release\net5.0\Chala.backend.Infrastructure.dll
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\bin\Release\net5.0\ref\Chala.backend.Infrastructure.dll
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\bin\Release\net5.0\Chala.backend.Infrastructure.pdb
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.AssemblyInfo.cs
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.dll
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\ref\Chala.backend.Infrastructure.dll
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Release\net5.0\Chala.backend.Infrastructure.pdb

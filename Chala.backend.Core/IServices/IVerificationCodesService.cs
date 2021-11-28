@@ -9,7 +9,6 @@ namespace Chala.backend.Core.IServices
 {
     public interface IVerificationCodesService
     {
-        IEnumerable<VerificationCodes> GetAllAsQueryable();
         VerificationCodes GetById(Guid id);
         bool GenerateVerificationCodeForEmail(string email);
         bool CheckVerificationCodeForEmail(string code, string email);
