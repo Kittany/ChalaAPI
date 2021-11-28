@@ -57,7 +57,7 @@ namespace Chala.backend.Infrastructure.Utils
             }
         }
 
-        public static void SendVerificationCodeToUserEmail(string email, string firstName, string verificationCode)
+        public static void SendVerificationCode(string email, string firstName, string verificationCode)
         {
             SmtpClient client = new SmtpClient()
             {
@@ -78,12 +78,11 @@ namespace Chala.backend.Infrastructure.Utils
             {
                 From = FromEmail,
                 Subject = "Chala Verification Code For Email",
-                Body = $"<h1>Your Verification code is {verificationCode}</h1>",
-                //IsBodyHtml = true,
+                Body = $"<body style='display:flex;justify-content:center;align-items:center; background-color:#FAFAFA'><h2 style='color:black'>Your Verification code is <span style='color:green'>{verificationCode}</span></h2></body>",
+                IsBodyHtml = true
             };
             Message.To.Add(email);
 
-            //MailMessage Message = new MailMessage("Chala.Application@gmail.com", email, "Chala Verification Code For Email", $"Your Verification code is {verificationCode}");
             try
             {
                 client.Send(Message);

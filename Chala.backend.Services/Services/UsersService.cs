@@ -5,6 +5,7 @@ using Chala.backend.Infrastructure.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Chala.backend.Services.Services
 {
@@ -25,20 +26,27 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Users.GetByIdIncluded(Id);
         }
 
-        public string Authorize(string email, string password)
+        public Dictionary<string,string> Authorize(string email, string password)
         {
             var user = _unitOfWork.Users.Where(x => x.Email.Equals(email)).FirstOrDefault();
 
             if (user == null)
-                return "";
+                return new Dictionary<string, string>();
 
             var res =  BCrypt.Net.BCrypt.Verify(password, user.Password);
 
 
             if (res)
-                return StaticFunctions.GenerateJwtToken(user.Id);
+            {
+                var dictionary = new Dictionary<string, string>();
+                dictionary.Add("id", user.Id.ToString());
+                dictionary.Add("token", StaticFunctions.GenerateJwtToken(user.Id));
+                dictionary.Add("isVerified", user.IsVerified.ToString());
 
-            return "";
+                return dictionary;
+            }
+
+            return new Dictionary<string, string>();
         }
         public bool Create(User user)
         {
@@ -51,7 +59,34 @@ namespace Chala.backend.Services.Services
 
 
             _unitOfWork.Users.Add(user);
-            return _unitOfWork.Commit() > 0;
+
+
+           var userCreated = _unitOfWork.Commit() > 0;
+
+            if (userCreated)
+            {
+                string code = StaticFunctions.RandomString(5);
+                VerificationCodes entity = new VerificationCodes();
+                entity.UserId = user.Id;
+                entity.VerificationCode = code;
+
+                _unitOfWork.VerificationCodes.Add(entity);
+                var createdVerificationCode = _unitOfWork.Commit() > 0;
+
+                if (createdVerificationCode)
+                {
+
+                    Task.Run(() =>
+                    {
+                        StaticFunctions.SendVerificationCode(user.Email, user.FirstName, entity.VerificationCode);
+                    });
+                }
+
+
+                return true;
+            }
+            return false;
+
         }
 
         public bool Delete(User user)

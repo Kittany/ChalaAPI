@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chala.backend.Web.API", "Ch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chala.backend.Core", "Chala.backend.Core\Chala.backend.Core.csproj", "{F0241589-F9DD-4103-88E4-92AD5E2BD2AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chala.backend.Services", "Chala.backend.Services\Chala.backend.Services.csproj", "{D14FA598-69CB-4F50-87EB-B2C8BA9E83D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chala.backend.Services", "Chala.backend.Services\Chala.backend.Services.csproj", "{D14FA598-69CB-4F50-87EB-B2C8BA9E83D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4082B4B-9643-48A8-B7C4-ACCF662347BD}"
+	ProjectSection(SolutionItems) = preProject
+		.filenesting.json = .filenesting.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

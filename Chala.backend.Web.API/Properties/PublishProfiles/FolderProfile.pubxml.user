@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Hakamush\source\repos\Chala\Chala.backend.Web.API\bin\Release\net5.0\publish\</_PublishTargetUrl>
-    <History>True|2021-11-28T10:32:06.1979571Z;True|2021-11-27T14:22:16.1603627+02:00;True|2021-11-27T14:21:47.7554805+02:00;True|2021-11-27T14:14:03.6389168+02:00;</History>
+    <History>True|2021-11-28T18:04:33.4611630Z;True|2021-11-28T19:34:14.1070245+02:00;True|2021-11-28T19:31:44.6003045+02:00;True|2021-11-28T19:21:11.9194167+02:00;True|2021-11-28T18:55:09.7055074+02:00;True|2021-11-28T17:54:38.3657952+02:00;True|2021-11-28T15:58:39.8618093+02:00;True|2021-11-28T15:55:53.9268682+02:00;True|2021-11-28T15:55:25.2993358+02:00;True|2021-11-28T15:51:53.5052195+02:00;True|2021-11-28T12:49:48.9151427+02:00;True|2021-11-28T12:32:06.1979571+02:00;True|2021-11-27T14:22:16.1603627+02:00;True|2021-11-27T14:21:47.7554805+02:00;True|2021-11-27T14:14:03.6389168+02:00;</History>
   </PropertyGroup>
 </Project>

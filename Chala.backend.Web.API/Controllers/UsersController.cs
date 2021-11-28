@@ -31,10 +31,10 @@ namespace Chala.backend.Web.API.Controllers
         {
             var res = _userService.Authorize(userCredintials.Email, userCredintials.Password);
 
-            if (string.IsNullOrEmpty(res))
+            if (res.Values.Count == 0)
                 return BadRequest("Invalid credintials");
 
-            return Ok(res);
+            return Ok(new {id = res["id"],token = res["token"], isVerified = res["isVerified"]});
         }
 
         [Authorize]
@@ -69,15 +69,13 @@ namespace Chala.backend.Web.API.Controllers
             });
         }
 
-
-        [Authorize]
         [HttpPost]
         [Route("Create")]
         public IActionResult Create([FromBody] UserDTOs.Create dto)
         {
 
             if (_userService.GetAllAsQueryable().Any(x => x.Email.Equals(dto.Email)))
-                return BadRequest("Email already in use!");
+                return Conflict("Email already in use!");
 
             try
             {

@@ -16,12 +16,15 @@ namespace Chala.backend.Web.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IVerificationCodesService _verificationCodesService;
+        private readonly IUserService _userService;
 
-        public VerificationCodesController(IMapper mapper, IVerificationCodesService verificationCodesService)
+        public VerificationCodesController(IMapper mapper, IVerificationCodesService verificationCodesService, IUserService userService)
         {
             _mapper = mapper;
             _verificationCodesService = verificationCodesService;
+            _userService = userService;
         }
+
         [HttpGet]
         [Route("GetVerificationCodeById/{Id}")]
         public IActionResult GetVerificationCodeById(Guid Id)
@@ -36,9 +39,15 @@ namespace Chala.backend.Web.API.Controllers
         //[Authorize]
         [HttpPost]
         [Route("GenerateVerificationCodeForEmail")]
-        public IActionResult GenerateVerificationCodeForEmail([FromBody] string email)
+        public IActionResult GenerateVerificationCodeForEmail([FromBody] Guid Id)
         {
-            var res = _verificationCodesService.GenerateVerificationCodeForEmail(email);
+
+            var user = _userService.GetById(Id);
+
+            if (user == null)
+                return BadRequest("User does not exist.");
+
+            var res = _verificationCodesService.GenerateVerificationCodeForEmail(user.Email);
             if (res)
                 return Ok("Code has been generated Successfully");
 
@@ -50,7 +59,7 @@ namespace Chala.backend.Web.API.Controllers
         public IActionResult CheckVerificationCodeForEmail([FromBody] UserVerificationCodeAndEmail user)
         {
 
-            if (_verificationCodesService.CheckVerificationCodeForEmail(user.Code, user.Email))
+            if (_verificationCodesService.CheckVerificationCodeForEmail(user.Code, user.Id))
                 return Ok("Valid Code");
 
             return BadRequest("Invalid Code");
@@ -61,6 +70,6 @@ namespace Chala.backend.Web.API.Controllers
     public class UserVerificationCodeAndEmail
     {
         public string Code { get; set; }
-        public string Email { get; set; }
+        public Guid Id { get; set; }
     };
 }

@@ -40,14 +40,14 @@ namespace Chala.backend.Services.Services
             if (user != null) user.VerificationCode = code;
 
 
-            StaticFunctions.SendVerificationCodeToUserEmail(email, userData.FirstName, code);
+            StaticFunctions.SendVerificationCode(email, userData.FirstName, code);
 
             return _unitOfWork.Commit() > 0;
         }
 
-        public bool CheckVerificationCodeForEmail(string code, string email)
+        public bool CheckVerificationCodeForEmail(string code, Guid Id)
         {
-            var user = _unitOfWork.Users.SingleOrDefault(u => u.Email == email);
+            var user = _unitOfWork.Users.SingleOrDefault(u => u.Id == Id);
             if (user == null) return false;
 
             var res = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Id == user.Id && u.VerificationCode == code );
@@ -62,5 +62,13 @@ namespace Chala.backend.Services.Services
 
 
         }
+
+
+
+
+
+
+
+
     }
 }

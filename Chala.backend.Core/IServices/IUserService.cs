@@ -11,7 +11,7 @@ namespace Chala.backend.Core.IServices
     {
         IEnumerable<User> GetAllAsQueryable();
         User GetById(Guid id);
-        string Authorize(string email, string password);
+        Dictionary<string,string> Authorize(string email, string password);
         bool Create(User user);
         bool Edit(User oldUser, User newUser);
         bool Delete(User user);

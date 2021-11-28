@@ -11,6 +11,6 @@ namespace Chala.backend.Core.IServices
     {
         VerificationCodes GetById(Guid id);
         bool GenerateVerificationCodeForEmail(string email);
-        bool CheckVerificationCodeForEmail(string code, string email);
+        bool CheckVerificationCodeForEmail(string code, Guid Id);
     }
 }
