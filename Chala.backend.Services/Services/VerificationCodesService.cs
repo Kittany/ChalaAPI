@@ -53,7 +53,13 @@ namespace Chala.backend.Services.Services
             var res = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Id == user.Id && u.VerificationCode == code );
 
 
-            return res != null;
+
+
+            user.IsVerified = res != null;
+            _unitOfWork.Users.Update(user);
+            return _unitOfWork.Commit() > 0;
+
+
 
         }
     }
