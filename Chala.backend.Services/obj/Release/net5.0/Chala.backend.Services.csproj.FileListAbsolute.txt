@@ -11,7 +11,6 @@ C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\Chala.backend.Services.AssemblyInfoInputs.cache
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\Chala.backend.Services.AssemblyInfo.cs
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\Chala.backend.Services.csproj.CoreCompileInputs.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\Chala.backend.Services.csproj.CopyComplete
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\Chala.backend.Services.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\ref\Chala.backend.Services.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Release\net5.0\Chala.backend.Services.pdb

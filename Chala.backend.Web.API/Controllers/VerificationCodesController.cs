@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Chala.backend.Core.IServices;
+using Chala.backend.Infrastructure.Entities.DTOs;
 using Chala.backend.Web.API.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -36,10 +37,10 @@ namespace Chala.backend.Web.API.Controllers
             return BadRequest("Invalid code.");
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpPost]
-        [Route("GenerateVerificationCodeForEmail")]
-        public IActionResult GenerateVerificationCodeForEmail([FromBody] Guid Id)
+        [Route("GenerateVerificationCodeForEmail/{Id}")]
+        public IActionResult GenerateVerificationCodeForEmail(Guid Id)
         {
 
             var user = _userService.GetById(Id);
@@ -53,10 +54,10 @@ namespace Chala.backend.Web.API.Controllers
 
             return BadRequest("Failed to generate the code");
         }
-
+        [Authorize]
         [HttpPost]
         [Route("CheckVerificationCodeForEmail")]
-        public IActionResult CheckVerificationCodeForEmail([FromBody] UserVerificationCodeAndEmail user)
+        public IActionResult CheckVerificationCodeForEmail([FromBody] VerificationCodeDTOs user)
         {
 
             if (_verificationCodesService.CheckVerificationCodeForEmail(user.Code, user.Id))
@@ -67,9 +68,4 @@ namespace Chala.backend.Web.API.Controllers
 
     }
 
-    public class UserVerificationCodeAndEmail
-    {
-        public string Code { get; set; }
-        public Guid Id { get; set; }
-    };
 }
