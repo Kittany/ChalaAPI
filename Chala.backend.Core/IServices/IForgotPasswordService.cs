@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Chala.backend.Core.IServices
 {
-    public interface IForgotPasswordTokensService
+    public interface IForgotPasswordService
     {
         IEnumerable<ForgotPasswordTokens> GetAllAsQueryable();
-        ForgotPasswordTokens GetById(Guid id);
+        bool GenerateForgotPasswordCode(string email);
+        bool CheckForgotPasswordCode(string code, Guid Id);
     }
 }

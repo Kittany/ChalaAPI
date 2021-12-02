@@ -44,7 +44,7 @@ namespace Chala.backend.Web.API
             services.AddTransient<IRoutineService, RoutineService>();
             services.AddTransient<ITagService, TagService>();
             services.AddTransient<ITodoTaskService, TodoTaskService>();
-            services.AddTransient<IForgotPasswordTokensService, ForgotPasswordTokensService>();
+            services.AddTransient<IForgotPasswordService, ForgotPasswordService>();
             services.AddTransient<IVerificationCodesService, VerificationCodesService>();
 
             services.AddAutoMapper(typeof(Startup));

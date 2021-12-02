@@ -39,10 +39,9 @@ namespace Chala.backend.Web.API.Controllers
 
         [Authorize]
         [HttpPost]
-        [Route("GenerateVerificationCodeForEmail/{Id}")]
-        public IActionResult GenerateVerificationCodeForEmail(Guid Id)
+        [Route("GenerateVerificationCode/{Id}")]
+        public IActionResult GenerateVerificationCode(Guid Id)
         {
-
             var user = _userService.GetById(Id);
 
             if (user == null)
@@ -57,7 +56,7 @@ namespace Chala.backend.Web.API.Controllers
         [Authorize]
         [HttpPost]
         [Route("CheckVerificationCodeForEmail")]
-        public IActionResult CheckVerificationCodeForEmail([FromBody] VerificationCodeDTOs user)
+        public IActionResult CheckVerificationCodeForEmail([FromBody] ValidateCodeDTOs user)
         {
 
             if (_verificationCodesService.CheckVerificationCodeForEmail(user.Code, user.Id))

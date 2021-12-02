@@ -59,15 +59,7 @@ namespace Chala.backend.Services.Services
             _unitOfWork.Users.Update(user);
             return _unitOfWork.Commit() > 0;
 
-
-
         }
-
-
-
-
-
-
 
 
     }
