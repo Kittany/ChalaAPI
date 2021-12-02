@@ -24,11 +24,12 @@ namespace Chala.backend.Services.Services
 
         public bool GenerateForgotPasswordCode(string email)
         {
-            string code = StaticFunctions.RandomString(5);
             var user = _unitOfWork.Users.SingleOrDefault(u => u.Email == email);
 
-            if (user == null || !user.IsVerified)
+            if (user == null)
                 return false;
+            
+            string code = StaticFunctions.RandomString(5);
 
             _unitOfWork.ForgotPasswordTokens.Add(new ForgotPasswordTokens { UserId = user.Id, Token = code,ValidUntil = DateTime.Now.AddDays(1) }
             );

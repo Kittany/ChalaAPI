@@ -25,17 +25,12 @@ namespace Chala.backend.Web.API.Controllers
             _forgotPasswordService = forgotPasswordService;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
-        [Route("GenerateForgotPasswordCode/{Id}")]
-        public IActionResult GenerateForgotPasswordCode(Guid Id)
+        [Route("GenerateForgotPasswordCode")]
+        public IActionResult GenerateForgotPasswordCode([FromBody] string email)
         {
-            var user = _userService.GetById(Id);
-
-            if (user == null)
-                return BadRequest("User does not exist.");
-
-            var res = _forgotPasswordService.GenerateForgotPasswordCode(user.Email);
+            var res = _forgotPasswordService.GenerateForgotPasswordCode(email);
             if (res)
                 return Ok("Code has been generated Successfully");
 
