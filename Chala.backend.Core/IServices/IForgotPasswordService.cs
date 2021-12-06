@@ -11,6 +11,6 @@ namespace Chala.backend.Core.IServices
     {
         IEnumerable<ForgotPasswordTokens> GetAllAsQueryable();
         bool GenerateForgotPasswordCode(string email);
-        bool CheckForgotPasswordCode(string code, Guid Id);
+        bool CheckForgotPasswordCode(string code, User user);
     }
 }

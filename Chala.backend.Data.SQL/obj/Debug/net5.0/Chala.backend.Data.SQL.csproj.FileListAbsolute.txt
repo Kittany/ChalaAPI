@@ -73,7 +73,6 @@ C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.AssemblyInfoInputs.cache
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.AssemblyInfo.cs
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.csproj.CoreCompileInputs.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.csproj.CopyComplete
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\ref\Chala.backend.Data.SQL.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.pdb
@@ -98,3 +97,4 @@ C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Debug\net5.0\Cha
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Debug\net5.0\ref\Chala.backend.Data.SQL.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.pdb
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.genruntimeconfig.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Debug\net5.0\Chala.backend.Data.SQL.csproj.CopyComplete

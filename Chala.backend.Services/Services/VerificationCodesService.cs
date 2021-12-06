@@ -24,6 +24,9 @@ namespace Chala.backend.Services.Services
         {
             return _unitOfWork.VerificationCodes.GetById(id);
         }
+
+
+
         public bool GenerateVerificationCodeForEmail(string email)
         {
             string code = StaticFunctions.RandomString(5);
@@ -45,12 +48,16 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Commit() > 0;
         }
 
+
+
+
+
         public bool CheckVerificationCodeForEmail(string code, Guid Id)
         {
             var user = _unitOfWork.Users.SingleOrDefault(u => u.Id == Id);
             if (user == null) return false;
 
-            var res = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Id == user.Id && u.VerificationCode == code );
+            var res = _unitOfWork.VerificationCodes.SingleOrDefault(u => u.User.Id == user.Id && u.VerificationCode == code);
 
 
 

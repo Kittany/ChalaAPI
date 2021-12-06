@@ -111,3 +111,4 @@ C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Release\net5.0
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Release\net5.0\win-x86\ref\Chala.backend.Web.API.dll
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Release\net5.0\win-x86\Chala.backend.Web.API.pdb
 C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Release\net5.0\win-x86\Chala.backend.Web.API.genruntimeconfig.cache
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Web.API\obj\Release\net5.0\win-x86\Chala.backend.Web.API.csproj.CopyComplete

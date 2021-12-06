@@ -12,6 +12,7 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public Guid Id { get; set; }
         [ForeignKey("User")]
         public Guid UserId { get; set; }
+        // CHANGE TOKEN TO CODE. AFTER WE FINISH THE PROJECT
         public string Token { get; set; }
         public DateTime ValidUntil { get; set; }
 

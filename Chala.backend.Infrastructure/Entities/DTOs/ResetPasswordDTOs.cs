@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Chala.backend.Infrastructure.Entities.DTOs
 {
-    public class ValidateCodeDTOs
+    public class ResetPasswordDTOs
     {
-        public string Code { get; set; }
         public Guid Id { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

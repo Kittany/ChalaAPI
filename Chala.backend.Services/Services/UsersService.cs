@@ -1,6 +1,7 @@
 ﻿using Chala.backend.Core;
 using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DB;
+using Chala.backend.Infrastructure.Entities.DTOs;
 using Chala.backend.Infrastructure.Utils;
 using System;
 using System.Collections.Generic;
@@ -111,6 +112,13 @@ namespace Chala.backend.Services.Services
 
         }
 
-
+        public bool ResetPassword(User user, string password)
+        {
+            //user.Password = password;
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+            user.Password = passwordHash;
+            _unitOfWork.Users.Update(user);
+            return _unitOfWork.Commit() > 0;
+        }
     }
 }

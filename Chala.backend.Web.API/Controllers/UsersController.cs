@@ -136,6 +136,26 @@ namespace Chala.backend.Web.API.Controllers
 
         }
 
+        [HttpPost]
+        [Route("ResetPassword")]
+        public IActionResult ResetPassword([FromBody] ResetPasswordDTOs dto)
+        {
+            try
+            {
+                var user = _userService.GetAllAsQueryable().SingleOrDefault(user => user.Email == dto.Email);
+
+                if (_userService.ResetPassword(user, dto.Password)) 
+                    return Ok("Password has been updated");
+
+                return BadRequest("Failed to update the password.");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Failed to update the password.");
+            }
+
+        }
+
 
     }
 }

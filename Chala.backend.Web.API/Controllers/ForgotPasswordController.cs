@@ -25,36 +25,29 @@ namespace Chala.backend.Web.API.Controllers
             _forgotPasswordService = forgotPasswordService;
         }
 
-        //[Authorize]
         [HttpPost]
         [Route("GenerateForgotPasswordCode")]
-        public IActionResult GenerateForgotPasswordCode([FromBody] string email)
+        public IActionResult GenerateForgotPasswordCode([FromBody] UserCredintials credintials)
         {
-            var res = _forgotPasswordService.GenerateForgotPasswordCode(email);
+            var res = _forgotPasswordService.GenerateForgotPasswordCode(credintials.Email);
             if (res)
                 return Ok("Code has been generated Successfully");
 
             return BadRequest("Failed to generate the code");
         }
 
-        [Authorize]
         [HttpPost]
         [Route("CheckForgotPasswordCode")]
-        public IActionResult CheckVerificationCodeForEmail([FromBody] ValidateCodeDTOs user)
+        public IActionResult CheckVerificationCodeForEmail([FromBody] ValidateCodeDTOs dto) // EMAIL, CODE
         {
 
+            var user = _userService.GetAllAsQueryable().SingleOrDefault(u => u.Email == dto.Email);
 
-            var code = _forgotPasswordService.GetAllAsQueryable().Where(x => x.UserId == user.Id && x.Token == user.Code).FirstOrDefault();
-
-            if (code != null)
-            {
-                if (code.ValidUntil < DateTime.Now)
-                    return Conflict("Code is outdated");
-
-            }
+            if (user == null)
+                return BadRequest("User doesn't exist.");
 
 
-            if (_forgotPasswordService.CheckForgotPasswordCode(user.Code, user.Id))
+            if (_forgotPasswordService.CheckForgotPasswordCode(dto.Code, user))
                 return Ok("Valid Code");
 
             return BadRequest("Invalid Code");

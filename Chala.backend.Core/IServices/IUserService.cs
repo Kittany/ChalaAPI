@@ -1,4 +1,5 @@
 ﻿using Chala.backend.Infrastructure.Entities.DB;
+using Chala.backend.Infrastructure.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Chala.backend.Core.IServices
         bool Create(User user);
         bool Edit(User oldUser, User newUser);
         bool Delete(User user);
-
+        bool ResetPassword(User user, string password);
 
     }
 }

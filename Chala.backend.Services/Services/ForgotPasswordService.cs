@@ -40,11 +40,8 @@ namespace Chala.backend.Services.Services
             return _unitOfWork.Commit() > 0;
         }
 
-        public bool CheckForgotPasswordCode(string code, Guid Id)
+        public bool CheckForgotPasswordCode(string code, User user)
         {
-            var user = _unitOfWork.Users.SingleOrDefault(u => u.Id == Id);
-            if (user == null) return false;
-
             var res = _unitOfWork.ForgotPasswordTokens.SingleOrDefault(u => u.User.Id == user.Id && u.Token == code && u.ValidUntil > DateTime.Now);
 
             return res != null;

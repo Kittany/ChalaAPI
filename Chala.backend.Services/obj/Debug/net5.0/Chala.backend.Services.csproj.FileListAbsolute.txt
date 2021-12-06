@@ -82,3 +82,4 @@ C:\Users\Hakamush\source\repos\Chala\Chala.backend.Services\obj\Debug\net5.0\Cha
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Services\obj\Debug\net5.0\ref\Chala.backend.Services.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.pdb
+C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Services\obj\Debug\net5.0\Chala.backend.Services.csproj.CopyComplete
