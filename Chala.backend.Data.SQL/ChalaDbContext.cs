@@ -12,7 +12,6 @@ namespace Chala.backend.Data.SQL
         public DbSet<User> Users { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Routine> Routines { get; set; }
-        public DbSet<Tag> Tags { get; set; }
         public DbSet<TodoTask> TodoTasks { get; set; }
         public DbSet<ForgotPasswordTokens> ForgotPasswordTokens { get; set; }
         public DbSet<VerificationCodes> VerificationCodes { get; set; }

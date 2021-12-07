@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Chala.backend.Data.SQL.Migrations
 {
     [DbContext(typeof(ChalaDbContext))]
-    [Migration("20210827182539_init")]
+    [Migration("20211207104556_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace Chala.backend.Data.SQL.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Event", b =>
@@ -27,28 +27,48 @@ namespace Chala.backend.Data.SQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("EndHour")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("ScheduleId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("StartHour")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("TagId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ScheduleId");
+                    b.HasIndex("UserId");
 
-                    b.HasIndex("TagId");
+                    b.ToTable("Events");
+                });
 
-                    b.ToTable("Event");
+            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.ForgotPasswordTokens", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ValidUntil")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ForgotPasswordTokens");
                 });
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Routine", b =>
@@ -57,10 +77,10 @@ namespace Chala.backend.Data.SQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("EndHour")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Friday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<bool>("Monday")
@@ -75,8 +95,8 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.Property<bool>("Sunday")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("TagId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Thursday")
                         .HasColumnType("bit");
@@ -95,47 +115,9 @@ namespace Chala.backend.Data.SQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TagId");
-
                     b.HasIndex("UserId");
 
-                    b.ToTable("Routine");
-                });
-
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Schedule", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Schedule");
-                });
-
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Tag", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ImageSrc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tags");
+                    b.ToTable("Routines");
                 });
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.TodoTask", b =>
@@ -144,7 +126,7 @@ namespace Chala.backend.Data.SQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsActive")
+                    b.Property<bool>("IsFinished")
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
@@ -157,7 +139,7 @@ namespace Chala.backend.Data.SQL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TodoTask");
+                    b.ToTable("TodoTasks");
                 });
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.User", b =>
@@ -169,16 +151,25 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.Property<DateTime>("Birthdate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Password")
+                    b.Property<bool>("IsVerified")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -186,48 +177,51 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Event", b =>
+            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.VerificationCodes", b =>
                 {
-                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.Schedule", "Schedule")
-                        .WithMany("Events")
-                        .HasForeignKey("ScheduleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
-                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.Tag", "Tag")
-                        .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Navigation("Schedule");
+                    b.Property<string>("VerificationCode")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Navigation("Tag");
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("VerificationCodes");
                 });
 
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Routine", b =>
+            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Event", b =>
                 {
-                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.Tag", "Tag")
-                        .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
-                        .WithMany("Routines")
+                        .WithMany("Events")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Tag");
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.ForgotPasswordTokens", b =>
+                {
+                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Schedule", b =>
+            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Routine", b =>
                 {
                     b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
-                        .WithMany("Schedules")
+                        .WithMany("Routines")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -246,18 +240,26 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Schedule", b =>
+            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.VerificationCodes", b =>
                 {
-                    b.Navigation("Events");
+                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
+                        .WithMany("VerificationCodes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.User", b =>
                 {
+                    b.Navigation("Events");
+
                     b.Navigation("Routines");
 
-                    b.Navigation("Schedules");
-
                     b.Navigation("Tasks");
+
+                    b.Navigation("VerificationCodes");
                 });
 #pragma warning restore 612, 618
         }

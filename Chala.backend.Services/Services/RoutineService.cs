@@ -45,7 +45,6 @@ namespace Chala.backend.Services.Services
         {
             oldRoutine.Title = newRoutine.Title;
             oldRoutine.StartHour = newRoutine.StartHour;
-            oldRoutine.EndHour = newRoutine.EndHour;
             oldRoutine.Sunday = newRoutine.Sunday;
             oldRoutine.Monday = newRoutine.Monday;
             oldRoutine.Tuesday = newRoutine.Tuesday;

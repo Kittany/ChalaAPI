@@ -49,7 +49,6 @@ namespace Chala.backend.Services.Services
         {
             oldEvent.Title = newEvent.Title;
             oldEvent.StartHour = newEvent.StartHour;
-            oldEvent.EndHour = newEvent.EndHour;
             oldEvent.Date = newEvent.Date;
 
             _unitOfWork.Events.Update(oldEvent);

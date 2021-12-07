@@ -1,8 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Chala.backend.Data.SQL",
-    "\\Chala.backend.Data.SQL\\Migrations"
+    "\\Chala.backend.Data.SQL"
   ],
   "SelectedNode": "\\Chala.backend.sln",
   "PreviewInSolutionExplorer": false

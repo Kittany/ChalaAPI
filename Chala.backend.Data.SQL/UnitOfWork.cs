@@ -22,7 +22,6 @@ namespace Chala.backend.Data.SQL
         private IEventRepository _eventRepository;
         private IRoutineRepository _routineRepository;
         private ITodoTaskRepository _todoTaskRepository;
-        private ITagRepository _tagRepository;
         private IForgotPasswordTokensRepository _forgotPasswordTokensRepository;
         private IVerificationCodesRepository _verificationCodes;
 
@@ -37,7 +36,6 @@ namespace Chala.backend.Data.SQL
 
         public ITodoTaskRepository TodoTasks => _todoTaskRepository ??= new TodoTaskRepository(_context);
 
-        public ITagRepository Tags => _tagRepository ??= new TagRepository(_context);
         public IForgotPasswordTokensRepository ForgotPasswordTokens => _forgotPasswordTokensRepository ??= new ForgotPasswordTokensRepository(_context);
         public IVerificationCodesRepository VerificationCodes => _verificationCodes ??= new VerificationCodesRepository(_context);
 

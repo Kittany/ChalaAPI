@@ -9,11 +9,9 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public Guid Id { get; set; }
         [ForeignKey("User")]
         public Guid UserId { get; set; }
-        [ForeignKey("Tag")]
-        public Guid TagId { get; set; }
+        public int TagId { get; set; }
         public string Title { get; set; }
         public int StartHour { get; set; }
-        public int EndHour { get; set; }
         public bool Sunday { get; set; }
         public bool Monday { get; set; }
         public bool Tuesday { get; set; }
@@ -24,7 +22,5 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public bool IsActive { get; set; }
 
         public virtual User User { get; set; }
-        public virtual Tag Tag { get; set; }
-
     }
 }

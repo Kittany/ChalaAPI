@@ -16,7 +16,6 @@ namespace Chala.backend.Infrastructure.Entities.DTOs
         public class Edit
         {
             public Guid Id { get; set; }
-            public Guid UserId { get; set; }
             public string Title { get; set; }
         }
     }

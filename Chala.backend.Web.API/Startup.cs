@@ -42,7 +42,6 @@ namespace Chala.backend.Web.API
             services.AddTransient<IUserService, UsersService>();
             services.AddTransient<IEventService, EventService>();
             services.AddTransient<IRoutineService, RoutineService>();
-            services.AddTransient<ITagService, TagService>();
             services.AddTransient<ITodoTaskService, TodoTaskService>();
             services.AddTransient<IForgotPasswordService, ForgotPasswordService>();
             services.AddTransient<IVerificationCodesService, VerificationCodesService>();

@@ -28,14 +28,11 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EndHour")
-                        .HasColumnType("int");
-
                     b.Property<int>("StartHour")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("TagId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -44,8 +41,6 @@ namespace Chala.backend.Data.SQL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TagId");
 
                     b.HasIndex("UserId");
 
@@ -80,9 +75,6 @@ namespace Chala.backend.Data.SQL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("EndHour")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Friday")
                         .HasColumnType("bit");
 
@@ -101,8 +93,8 @@ namespace Chala.backend.Data.SQL.Migrations
                     b.Property<bool>("Sunday")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("TagId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Thursday")
                         .HasColumnType("bit");
@@ -121,25 +113,9 @@ namespace Chala.backend.Data.SQL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TagId");
-
                     b.HasIndex("UserId");
 
                     b.ToTable("Routines");
-                });
-
-            modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Tag", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.TodoTask", b =>
@@ -220,19 +196,11 @@ namespace Chala.backend.Data.SQL.Migrations
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Event", b =>
                 {
-                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.Tag", "Tag")
-                        .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
                         .WithMany("Events")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Tag");
 
                     b.Navigation("User");
                 });
@@ -250,19 +218,11 @@ namespace Chala.backend.Data.SQL.Migrations
 
             modelBuilder.Entity("Chala.backend.Infrastructure.Entities.DB.Routine", b =>
                 {
-                    b.HasOne("Chala.backend.Infrastructure.Entities.DB.Tag", "Tag")
-                        .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Chala.backend.Infrastructure.Entities.DB.User", "User")
                         .WithMany("Routines")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Tag");
 
                     b.Navigation("User");
                 });

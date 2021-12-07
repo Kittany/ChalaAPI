@@ -14,7 +14,6 @@ namespace Chala.backend.Core
         IEventRepository Events { get; }
         IRoutineRepository Routines { get; }
         ITodoTaskRepository TodoTasks { get; }
-        ITagRepository Tags { get; }
         IForgotPasswordTokensRepository ForgotPasswordTokens { get; }
         IVerificationCodesRepository VerificationCodes { get; }
 
