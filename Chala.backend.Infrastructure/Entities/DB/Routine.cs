@@ -11,7 +11,7 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public Guid UserId { get; set; }
         public int TagId { get; set; }
         public string Title { get; set; }
-        public int StartHour { get; set; }
+        public string StartHour { get; set; }
         public bool Sunday { get; set; }
         public bool Monday { get; set; }
         public bool Tuesday { get; set; }

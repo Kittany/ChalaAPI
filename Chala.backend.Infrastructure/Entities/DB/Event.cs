@@ -11,7 +11,7 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public int TagId { get; set; }
 
         public string Title { get; set; }
-        public int StartHour { get; set; }
+        public string StartHour { get; set; }
 
         public DateTime Date { get; set; }
         public virtual User User { get; set; }
