@@ -13,7 +13,6 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime Birthdate { get; set; }
         public DateTime CreateDate { get; set; }
         public bool IsActive { get; set; }
         public bool IsVerified { get; set; }

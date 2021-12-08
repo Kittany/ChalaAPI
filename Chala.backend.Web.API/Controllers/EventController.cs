@@ -50,14 +50,13 @@ namespace Chala.backend.Web.API.Controllers
                     tagId = item.TagId,
                     title = item.Title,
                     startHour = item.StartHour,
-                    date = item.Date
+                    date = item.Date.ToShortDateString()
                 });
             }
 
             return Ok(response);
         
         }
-
 
 
 
@@ -108,10 +107,13 @@ namespace Chala.backend.Web.API.Controllers
 
         [HttpPost]
         [Route("EditEventById/{Id}")]
-        public IActionResult EditEventById(Guid Id, [FromBody] EventDTOs.Edit dto)
+        public IActionResult EditEventById([FromBody] EventDTOs.Edit dto)
         {
-            // Check if prevEvent != null <->
-            var prevEvent = _eventService.GetById(Id);
+
+            var prevEvent = _eventService.GetById(dto.Id);
+
+            if (prevEvent == null)
+                return BadRequest("Event does not exist.");
 
             var newEdittedEvent = _mapper.Map<Event>(dto);
 

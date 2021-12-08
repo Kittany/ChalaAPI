@@ -50,6 +50,7 @@ namespace Chala.backend.Services.Services
             oldEvent.Title = newEvent.Title;
             oldEvent.StartHour = newEvent.StartHour;
             oldEvent.Date = newEvent.Date;
+            oldEvent.TagId = newEvent.TagId;
 
             _unitOfWork.Events.Update(oldEvent);
             return _unitOfWork.Commit() > 0;

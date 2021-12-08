@@ -26,6 +26,15 @@ namespace Chala.backend.Web.API.Controllers
 
 
         [HttpPost]
+        [Route("Tests")]
+        public IActionResult Tests([FromBody] Event eventt)
+        {
+            return Ok(eventt.Date.ToShortDateString());
+        }
+
+
+
+        [HttpPost]
         [Route("Authorize")]
         public IActionResult Authorize([FromBody] UserCredintials userCredintials)
         {
@@ -62,7 +71,6 @@ namespace Chala.backend.Web.API.Controllers
             id = res.Id,
             firstName = res.FirstName,
             lastName = res.LastName,
-            birthDate = res.Birthdate,
             createDate = res.CreateDate,
             isActive = res.IsActive,
             isVerified = res.IsVerified
@@ -98,7 +106,7 @@ namespace Chala.backend.Web.API.Controllers
 
         [Authorize]
         [HttpPost]
-        [Route("EditUserById/{Id}")]
+        [Route("EditUserById")]
         public IActionResult EditUserById([FromBody] UserDTOs.Edit dto)
         {
            

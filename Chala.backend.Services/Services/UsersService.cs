@@ -105,7 +105,6 @@ namespace Chala.backend.Services.Services
             oldUser.FirstName = newUser.FirstName;
             oldUser.LastName = newUser.LastName;
             oldUser.Password = newUser.Password;
-            oldUser.Birthdate = newUser.Birthdate;
 
             _unitOfWork.Users.Update(oldUser);
             return _unitOfWork.Commit() > 0;
@@ -114,7 +113,7 @@ namespace Chala.backend.Services.Services
 
         public bool ResetPassword(User user, string password)
         {
-            //user.Password = password;
+
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
             user.Password = passwordHash;
             _unitOfWork.Users.Update(user);

@@ -70,8 +70,15 @@ namespace Chala.backend.Web.API.Controllers
         [Route("EditRoutineById/{Id}")]
         public IActionResult EditRoutineById(Guid Id, [FromBody] RoutineDTOs.Edit dto)
         {
-            // Add Routine != null <->
+
+
             var prevRoutine = _routineService.GetById(Id);
+
+            if (prevRoutine == null)
+                return BadRequest("Routine does not exist.");
+
+
+
             var newEdittedRoutine = _mapper.Map<Routine>(dto);
 
             if (_routineService.Edit(prevRoutine, newEdittedRoutine))

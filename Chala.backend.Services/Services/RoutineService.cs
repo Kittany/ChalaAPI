@@ -53,6 +53,7 @@ namespace Chala.backend.Services.Services
             oldRoutine.Friday = newRoutine.Friday;
             oldRoutine.Saturday = newRoutine.Saturday;
             oldRoutine.IsActive = newRoutine.IsActive;
+            oldRoutine.TagId = newRoutine.TagId;
             _unitOfWork.Routines.Update(oldRoutine);
             return _unitOfWork.Commit() > 0;
         }

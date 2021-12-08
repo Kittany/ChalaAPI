@@ -14,7 +14,7 @@ namespace Chala.backend.Infrastructure.Entities.DTOs
             public string Title { get; set; }
             public Guid UserId { get; set; }
             public int TagId { get; set; }
-            public int StartHour { get; set; }
+            public long StartHour { get; set; }
             public DateTime Date { get; set; }
         }
 

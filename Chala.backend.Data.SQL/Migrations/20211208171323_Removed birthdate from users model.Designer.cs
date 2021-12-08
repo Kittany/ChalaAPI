@@ -4,14 +4,16 @@ using Chala.backend.Data.SQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Chala.backend.Data.SQL.Migrations
 {
     [DbContext(typeof(ChalaDbContext))]
-    partial class ChalaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211208171323_Removed birthdate from users model")]
+    partial class Removedbirthdatefromusersmodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
