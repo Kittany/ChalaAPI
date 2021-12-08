@@ -99,10 +99,10 @@ namespace Chala.backend.Web.API.Controllers
         [Authorize]
         [HttpPost]
         [Route("EditUserById/{Id}")]
-        public IActionResult EditUserById(Guid Id, [FromBody] UserDTOs.Edit dto)
+        public IActionResult EditUserById([FromBody] UserDTOs.Edit dto)
         {
            
-            var prevUser = _userService.GetById(Id);
+            var prevUser = _userService.GetById(dto.Id);
 
             if (prevUser == null)
                 return BadRequest("User does not exist.");
