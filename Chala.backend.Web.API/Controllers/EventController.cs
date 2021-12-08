@@ -17,23 +17,52 @@ namespace Chala.backend.Web.API.Controllers
     {
         private readonly IEventService _eventService;
         private readonly IMapper _mapper;
+        private readonly IUserService _userService;
 
-        public EventController(IMapper mapper, IEventService eventService)
+        public EventController(IEventService eventService, IMapper mapper, IUserService userService)
         {
             _eventService = eventService;
             _mapper = mapper;
+            _userService = userService;
         }
 
+
         [HttpGet]
-        [Route("GetAllEvents")]
-        public IActionResult GetAllEvents()
+        [Route("GetAllEvents/{Id}")]
+        public IActionResult GetAllEvents(Guid Id)
         {
-            var events = _eventService.GetAllAsQueryable().ToList();
-            if (events != null)
-                return Ok(events);
-            else
-                return BadRequest("Empty events");
+
+            var user = _userService.GetAllAsQueryable().Where(x => x.Id == Id).FirstOrDefault();
+
+            if (user == null)
+                return BadRequest("User does not exist.");
+
+            var events = _eventService.GetAllAsQueryable().Where(x => x.UserId == user.Id);
+
+
+            List<object> response = new List<object>();
+
+            foreach(var item in events)
+            {
+                response.Add(new
+                {
+                    id = item.Id,
+                    tagId = item.TagId,
+                    title = item.Title,
+                    startHour = item.StartHour,
+                    date = item.Date
+                });
+            }
+
+            return Ok(response);
+        
         }
+
+
+
+
+
+
         [HttpGet]
         [Route("GetEventById/{Id}")]
         public IActionResult GetEventById(Guid Id)

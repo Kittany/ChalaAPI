@@ -10,8 +10,6 @@ namespace Chala.backend.Infrastructure.Entities.DB
         public Guid UserId { get; set; }
         public string Title { get; set; }
         public bool IsFinished { get; set; }
-
-
         public virtual User User { get; set; }
 
     }

@@ -17,23 +17,46 @@ namespace Chala.backend.Web.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly ITodoTaskService _todoTaskService;
+        private readonly IUserService _userService;
 
-        public TodoTasksController(IMapper mapper, ITodoTaskService todoTaskService)
+        public TodoTasksController(IMapper mapper, ITodoTaskService todoTaskService, IUserService userService)
         {
             _mapper = mapper;
             _todoTaskService = todoTaskService;
+            _userService = userService;
         }
 
         [HttpGet]
-        [Route("GetAllTodoTask")]
-        public IActionResult GetAllTodoTask()
+        [Route("GetAllTodoTasks/{Id}")]
+        public IActionResult GetAllTodoTask(Guid Id)
         {
-            var todoTasks = _todoTaskService.GetAllAsQueryable();
-            if (todoTasks != null)
-                return Ok(todoTasks);
 
-            return BadRequest("Empty TodoTasks");
+
+            var user = _userService.GetById(Id);
+
+            if (user == null)
+                return BadRequest("User does not exist.");
+
+            var todoTasks = _todoTaskService.GetAllAsQueryable().Where(x => x.UserId == user.Id);
+
+
+            List<object> response = new List<object>();
+
+            foreach(var task in todoTasks)
+            {
+                response.Add(new
+                {
+                    id = task.Id,
+                    title = task.Title,
+                    isFinished = task.IsFinished
+                });
+            }    
+
+            return Ok(response);
         }
+
+
+
         [HttpGet]
         [Route("GetTodoTasksById/{Id}")]
         public IActionResult GetTodoTasksById(Guid Id)
@@ -59,19 +82,19 @@ namespace Chala.backend.Web.API.Controllers
 
                 return BadRequest("Failed to create a todoTask.");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest("Failed to create a todoTask.");
+                return BadRequest(e);
             }
 
         }
         [HttpPost]
-        [Route("EditTodoTask/{Id}")]
-        public IActionResult EditTodoTask(Guid Id, [FromBody] TodoTaskDTOs.Edit dto)
+        [Route("EditTodoTask")]
+        public IActionResult EditTodoTask([FromBody] TodoTaskDTOs.Edit dto)
         {
             try
             {
-                var prevTodoTask = _todoTaskService.GetById(Id);
+                var prevTodoTask = _todoTaskService.GetById(dto.Id);
                 var newEdittedTodoTask = _mapper.Map<TodoTask>(dto);
 
                 if (_todoTaskService.Edit(prevTodoTask, newEdittedTodoTask))

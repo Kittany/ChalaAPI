@@ -41,6 +41,7 @@ namespace Chala.backend.Services.Services
         public bool Edit(TodoTask oldTodoTask, TodoTask newTodoTask)
         {
             oldTodoTask.Title = newTodoTask.Title;
+            oldTodoTask.IsFinished = newTodoTask.IsFinished;
             _unitOfWork.TodoTasks.Update(oldTodoTask);
             return _unitOfWork.Commit() > 0;
         }
