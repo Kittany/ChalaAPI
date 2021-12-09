@@ -105,10 +105,6 @@ namespace Chala.backend.Services.Services
             oldUser.FirstName = newUser.FirstName;
             oldUser.LastName = newUser.LastName;
 
-            //Hash the password using the Bcrypt library
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(newUser.Password);
-
-            oldUser.Password = passwordHash;
             _unitOfWork.Users.Update(oldUser);
             return _unitOfWork.Commit() > 0;
 
