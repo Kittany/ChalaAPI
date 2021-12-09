@@ -18,22 +18,55 @@ namespace Chala.backend.Web.API.Controllers
         // Add Create Routine action.
         private readonly IMapper _mapper;
         private readonly IRoutineService _routineService;
+        private readonly IUserService _userService;
 
-        public RoutinesController(IMapper mapper, IRoutineService routineService)
+        public RoutinesController(IMapper mapper, IRoutineService routineService, IUserService userService)
         {
-            _routineService = routineService;
             _mapper = mapper;
+            _routineService = routineService;
+            _userService = userService;
         }
+
         [HttpGet]
-        [Route("GetAllRoutines")]
-        public IActionResult GetAllRoutines()
+        [Route("GetAllRoutines/{Id}")]
+        public IActionResult GetAllRoutines(Guid Id)
         {
-            var routines = _routineService.GetAllAsQueryable().ToList();
-            if (routines != null)
-                return Ok(routines);
-            else
-                return BadRequest("Empty routines");
+
+            var user = _userService.GetById(Id);
+
+            if (user == null)
+                return BadRequest("User does not exist.");
+
+
+            var routines = _routineService.GetAllAsQueryable().Where(x => x.UserId == user.Id);
+
+
+            List<object> response = new List<object>();
+
+            foreach (var item in routines)
+            {
+                response.Add(new
+                {
+                    id = item.Id,
+                    tagId = item.TagId,
+                    title = item.Title,
+                    startHour = item.StartHour,
+                    sunday = item.Sunday,
+                    monday = item.Monday,
+                    tuesday = item.Tuesday,
+                    wednesday = item.Wednesday,
+                    thursday = item.Thursday,
+                    friday = item.Friday,
+                    saturday = item.Saturday,
+                    isActive = item.IsActive
+                   
+                });
+            }
+
+            return Ok(response);
         }
+
+
         [HttpGet]
         [Route("GetRoutineById/{Id}")]
         public IActionResult GetRoutineById(Guid Id)

@@ -69,6 +69,7 @@ namespace Chala.backend.Web.API.Controllers
 
             return Ok(new { 
             id = res.Id,
+            email = res.Email,
             firstName = res.FirstName,
             lastName = res.LastName,
             createDate = res.CreateDate,
