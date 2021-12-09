@@ -18,10 +18,13 @@ namespace Chala.backend.Infrastructure.Entities.DTOs
             public DateTime Date { get; set; }
         }
 
-        public class Edit : Create
+        public class Edit 
         {
             public Guid Id { get; set; }
-
+            public string Title { get; set; }
+            public int TagId { get; set; }
+            public long StartHour { get; set; }
+            public DateTime Date { get; set; }
         }
     }
 }

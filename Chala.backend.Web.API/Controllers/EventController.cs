@@ -106,7 +106,7 @@ namespace Chala.backend.Web.API.Controllers
 
 
         [HttpPost]
-        [Route("EditEventById/{Id}")]
+        [Route("EditEventById")]
         public IActionResult EditEventById([FromBody] EventDTOs.Edit dto)
         {
 

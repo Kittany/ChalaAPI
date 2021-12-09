@@ -25,9 +25,20 @@ namespace Chala.backend.Infrastructure.Entities.DTOs
 
         }
 
-        public class Edit : Create
+        public class Edit
         {
             public Guid Id { get; set; }
+            public string Title { get; set; }
+            public int TagId { get; set; }
+            public long StartHour { get; set; }
+            public bool Sunday { get; set; }
+            public bool Monday { get; set; }
+            public bool Tuesday { get; set; }
+            public bool Wednesday { get; set; }
+            public bool Thursday { get; set; }
+            public bool Friday { get; set; }
+            public bool Saturday { get; set; }
+            public bool IsActive { get; set; }
         }
     }
 }
