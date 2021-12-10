@@ -57,3 +57,4 @@ C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Debug\net5
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\ref\Chala.backend.Infrastructure.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.pdb
+C:\Users\Hakamush\source\repos\Chala\Chala.backend.Infrastructure\obj\Debug\net5.0\Chala.backend.Infrastructure.csprojAssemblyReference.cache

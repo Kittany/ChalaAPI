@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {}
+    "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+    "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
         "projectName": "Chala.backend.Infrastructure",
-        "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Hakamush\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hakamush\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,12 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x86": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.209\\RuntimeIdentifierGraph.json"
         }
       }
     }

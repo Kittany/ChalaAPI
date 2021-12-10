@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,24 @@ namespace Chala.backend.Web.API
             services.AddTransient<IVerificationCodesService, VerificationCodesService>();
 
             services.AddAutoMapper(typeof(Startup));
+            services.AddSwaggerGen(setup =>
+            {
+                setup.CustomSchemaIds(type => type.ToString());
+                setup.SwaggerDoc("v1",
+                    new Microsoft.OpenApi.Models.OpenApiInfo
+                    { Title = "Chala", Description = "<strong>Chala Api-Documentation </strong>" });
+                var jwtSecurityScheme = new OpenApiSecurityScheme
+                {
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    Name = "JWT Authentication",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Description = "Put ONLY your JWT Bearer token on textbox below!",
+                };
+
+            });
+
 
             services.AddHttpContextAccessor();
             services.AddControllers();
@@ -73,6 +92,13 @@ namespace Chala.backend.Web.API
             app.UseAuthorization();
             app.UseAuthentication();
             app.UseMiddleware<JwtMiddleware>();
+            app.UseSwagger();
+            app.UseSwaggerUI(x => {
+                x.RoutePrefix = "";
+                x.SwaggerEndpoint("swagger/v1/swagger.json", "v1");
+
+
+            });
 
             app.UseEndpoints(endpoints =>
             {
