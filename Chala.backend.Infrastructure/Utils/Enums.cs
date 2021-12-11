@@ -9,7 +9,11 @@ namespace Chala.backend.Infrastructure.Utils
     public class Enums
     {
 
-
+        public enum DataTypes
+        {
+            Routine,
+            Event
+        }
 
 
 
