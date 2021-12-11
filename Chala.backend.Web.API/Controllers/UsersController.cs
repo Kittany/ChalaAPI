@@ -26,15 +26,6 @@ namespace Chala.backend.Web.API.Controllers
 
 
         [HttpPost]
-        [Route("Tests")]
-        public IActionResult Tests([FromBody] Event eventt)
-        {
-            return Ok(eventt.Date.ToShortDateString());
-        }
-
-
-
-        [HttpPost]
         [Route("Authorize")]
         public IActionResult Authorize([FromBody] UserCredintials userCredintials)
         {

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj": {}
+    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Core\\Chala.backend.Core.csproj": {
+    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Core\\Chala.backend.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj",
         "projectName": "Chala.backend.Core",
-        "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Core\\Chala.backend.Core.csproj",
-        "packagesPath": "C:\\Users\\Hakamush\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Core\\obj\\",
+        "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj",
+        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hakamush\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
+              "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
               }
             }
           }
@@ -61,24 +58,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.209\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x86": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj": {
+    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj",
         "projectName": "Chala.backend.Data.SQL",
-        "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj",
-        "packagesPath": "C:\\Users\\Hakamush\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Data.SQL\\obj\\",
+        "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Data.SQL\\Chala.backend.Data.SQL.csproj",
+        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Data.SQL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hakamush\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,11 +91,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Core\\Chala.backend.Core.csproj": {
-                "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Core\\Chala.backend.Core.csproj"
+              "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj": {
+                "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Core\\Chala.backend.Core.csproj"
               },
-              "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
+              "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj"
               }
             }
           }
@@ -145,24 +144,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.209\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x86": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
+    "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
         "projectName": "Chala.backend.Infrastructure",
-        "projectPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Hakamush\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hakamush\\source\\repos\\Chala\\Chala.backend.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\Chala.backend.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed\\source\\repos\\Chala_API\\Chala.backend.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Hakamush\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -208,7 +209,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.209\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x86": {
+          "#import": []
         }
       }
     }

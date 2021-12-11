@@ -354,6 +354,14 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
             "morelinq": {
               "target": "Package",
               "version": "[3.3.2, )"

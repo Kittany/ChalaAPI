@@ -27,4 +27,3 @@ C:\Users\Hakamush\source\repos\Chala\Chala.backend.Core\obj\Release\net5.0\Chala
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Core\obj\Release\net5.0\Chala.backend.Core.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Core\obj\Release\net5.0\ref\Chala.backend.Core.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Core\obj\Release\net5.0\Chala.backend.Core.pdb
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Core\obj\Release\net5.0\Chala.backend.Core.csproj.CopyComplete

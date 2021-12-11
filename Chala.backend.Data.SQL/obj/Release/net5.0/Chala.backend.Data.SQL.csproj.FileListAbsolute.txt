@@ -37,4 +37,3 @@ C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Release\net5.0\C
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Release\net5.0\ref\Chala.backend.Data.SQL.dll
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Release\net5.0\Chala.backend.Data.SQL.pdb
 C:\Users\Hakamush\source\repos\Chala\Chala.backend.Data.SQL\obj\Release\net5.0\Chala.backend.Data.SQL.genruntimeconfig.cache
-C:\Users\Mohamed\source\repos\Chala_API\Chala.backend.Data.SQL\obj\Release\net5.0\Chala.backend.Data.SQL.csproj.CopyComplete
