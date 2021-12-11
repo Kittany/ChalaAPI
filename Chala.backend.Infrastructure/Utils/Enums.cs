@@ -8,5 +8,11 @@ namespace Chala.backend.Infrastructure.Utils
 {
     public class Enums
     {
+
+
+
+
+
+
     }
 }
