@@ -86,6 +86,13 @@ namespace Chala.backend.Web.API.Controllers
                         tagId = routine.TagId,
                         title = routine.Title,
                         startHour = routine.StartHour,
+                        sunday = routine.Sunday,
+                        monday = routine.Monday,
+                        tuesday = routine.Tuesday,
+                        wednesday = routine.Wednesday,
+                        thursday = routine.Thursday,
+                        friday = routine.Friday,
+                        saturday = routine.Saturday,
                         timeInMinutes = ((new DateTime(1970, 1, 1) + time).Hour * 60) + (new DateTime(1970, 1, 1) + time).Minute
                     });
                     ;
