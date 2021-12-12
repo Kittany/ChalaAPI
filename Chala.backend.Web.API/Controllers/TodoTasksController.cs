@@ -2,6 +2,7 @@
 using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DB;
 using Chala.backend.Infrastructure.Entities.DTOs;
+using Chala.backend.Web.API.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -25,7 +26,7 @@ namespace Chala.backend.Web.API.Controllers
             _todoTaskService = todoTaskService;
             _userService = userService;
         }
-
+        [Authorize]
         [HttpGet]
         [Route("GetAllTodoTasks/{Id}")]
         public IActionResult GetAllTodoTask(Guid Id)
@@ -56,7 +57,7 @@ namespace Chala.backend.Web.API.Controllers
         }
 
 
-
+        [Authorize]
         [HttpGet]
         [Route("GetTodoTasksById/{Id}")]
         public IActionResult GetTodoTasksById(Guid Id)
@@ -67,6 +68,7 @@ namespace Chala.backend.Web.API.Controllers
 
             return BadRequest("todoTask not found");
         }
+        [Authorize]
         [HttpPost]
         [Route("CreateTodoTask")]
         public IActionResult CreateTodoTask([FromBody] TodoTaskDTOs.Create dto)
@@ -88,6 +90,7 @@ namespace Chala.backend.Web.API.Controllers
             }
 
         }
+        [Authorize]
         [HttpPost]
         [Route("EditTodoTask")]
         public IActionResult EditTodoTask([FromBody] TodoTaskDTOs.Edit dto)
@@ -108,6 +111,7 @@ namespace Chala.backend.Web.API.Controllers
             }
 
         }
+        [Authorize]
         [HttpPost]
         [Route("DeleteTodoTask/{Id}")]
         public IActionResult DeleteTodoTask(Guid Id)

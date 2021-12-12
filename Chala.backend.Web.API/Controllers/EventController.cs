@@ -2,6 +2,7 @@
 using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DB;
 using Chala.backend.Infrastructure.Entities.DTOs;
+using Chala.backend.Web.API.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,7 +27,7 @@ namespace Chala.backend.Web.API.Controllers
             _userService = userService;
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("GetAllEvents/{Id}")]
         public IActionResult GetAllEvents(Guid Id)
@@ -42,26 +43,30 @@ namespace Chala.backend.Web.API.Controllers
 
             List<object> response = new List<object>();
 
-            foreach(var item in events)
+            DateTime today = new DateTime();
+            foreach (var item in events)
             {
-                response.Add(new
+                if (item.Date > today)
                 {
-                    id = item.Id,
-                    tagId = item.TagId,
-                    title = item.Title,
-                    startHour = item.StartHour,
-                    date = item.Date.ToShortDateString()
-                });
+                    response.Add(new
+                    {
+                        id = item.Id,
+                        tagId = item.TagId,
+                        title = item.Title,
+                        startHour = item.StartHour,
+                        date = item.Date.ToShortDateString()
+                    });
+                }
             }
 
             return Ok(response);
-        
+
         }
 
 
 
 
-
+        [Authorize]
         [HttpGet]
         [Route("GetEventById/{Id}")]
         public IActionResult GetEventById(Guid Id)
@@ -72,7 +77,7 @@ namespace Chala.backend.Web.API.Controllers
             else
                 return BadRequest("Invalid Id / Empty event");
         }
-
+        [Authorize]
         [HttpGet]
         [Route("GetEventsByDate")]
         public IActionResult GetEventsByDate([FromBody] DateTime dateTime)
@@ -83,7 +88,7 @@ namespace Chala.backend.Web.API.Controllers
             else
                 return BadRequest("Empty events");
         }
-
+        [Authorize]
         [HttpPost]
         [Route("CreateEvent")]
         public IActionResult CreateEvent([FromBody] EventDTOs.Create dto)
@@ -104,7 +109,7 @@ namespace Chala.backend.Web.API.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpPost]
         [Route("EditEventById")]
         public IActionResult EditEventById([FromBody] EventDTOs.Edit dto)
@@ -123,7 +128,7 @@ namespace Chala.backend.Web.API.Controllers
                 return BadRequest("Failed to edit the event");
         }
 
-
+        [Authorize]
         [HttpPost]
         [Route("DeleteEventById/{Id}")]
         public IActionResult DeleteEventById(Guid Id)

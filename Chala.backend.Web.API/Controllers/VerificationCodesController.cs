@@ -37,7 +37,6 @@ namespace Chala.backend.Web.API.Controllers
             return BadRequest("Invalid code.");
         }
 
-        [Authorize]
         [HttpPost]
         [Route("GenerateVerificationCode/{Id}")]
         public IActionResult GenerateVerificationCode(Guid Id)
@@ -53,7 +52,7 @@ namespace Chala.backend.Web.API.Controllers
 
             return BadRequest("Failed to generate the code");
         }
-        [Authorize]
+
         [HttpPost]
         [Route("CheckVerificationCodeForEmail")]
         public IActionResult CheckVerificationCodeForEmail([FromBody] ValidateCodeDTOs user)

@@ -2,6 +2,7 @@
 using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DB;
 using Chala.backend.Infrastructure.Entities.DTOs;
+using Chala.backend.Web.API.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,7 +27,7 @@ namespace Chala.backend.Web.API.Controllers
             _routineService = routineService;
             _userService = userService;
         }
-
+        [Authorize]
         [HttpGet]
         [Route("GetAllRoutines/{Id}")]
         public IActionResult GetAllRoutines(Guid Id)
@@ -66,7 +67,7 @@ namespace Chala.backend.Web.API.Controllers
             return Ok(response);
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("GetRoutineById/{Id}")]
         public IActionResult GetRoutineById(Guid Id)
@@ -77,7 +78,7 @@ namespace Chala.backend.Web.API.Controllers
             else
                 return BadRequest("Routine not found");
         }
-
+        [Authorize]
         [HttpPost]
         [Route("CreateRoutine")]
         public IActionResult CreateRoutine([FromBody] RoutineDTOs.Create dto)
@@ -98,7 +99,7 @@ namespace Chala.backend.Web.API.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpPost]
         [Route("EditRoutineById")]
         public IActionResult EditRoutineById([FromBody] RoutineDTOs.Edit dto)
@@ -120,7 +121,7 @@ namespace Chala.backend.Web.API.Controllers
                 return BadRequest("Failed to edit the routine");
         }
 
-
+        [Authorize]
         [HttpPost]
         [Route("DeleteRoutineById/{Id}")]
         public IActionResult DeleteRoutineById(Guid Id)

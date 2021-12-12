@@ -1,6 +1,7 @@
 ﻿using Chala.backend.Core.IServices;
 using Chala.backend.Infrastructure.Entities.DTOs;
 using Chala.backend.Infrastructure.Utils;
+using Chala.backend.Web.API.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,7 +27,7 @@ namespace Chala.backend.Web.API.Controllers
             _eventService = eventService;
             _routineService = routineService;
         }
-
+        [Authorize]
         [HttpPost]
         [Route("GetByDate")]
         public IActionResult GetByDate([FromBody] ScheduleDTOs dto)
