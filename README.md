@@ -20,8 +20,6 @@ A Mobile Application that was built & designed to help users manage their Time, 
 
 ### JWT Authentication
 
-### SignalR
-
 ### React Native (EXPO)
 
 ### Redux
