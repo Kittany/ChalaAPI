@@ -36,8 +36,8 @@ namespace Chala.backend.Infrastructure.Utils
 
         public static void CreateTestMessage2(string server)
         {
-            string to = "m_love_1999@hotmail.com";
-            string from = "Chala.Application@gmail.com";
+            //string to = "";
+            //string from = "";
             MailMessage message = new MailMessage(from, to);
             message.Subject = "Using the new SMTP client.";
             message.Body = @"Using this new feature, you can send an email message from an application very easily.";
@@ -68,8 +68,8 @@ namespace Chala.backend.Infrastructure.Utils
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential()
                 {
-                    UserName = "Chala.Application@gmail.com",
-                    Password = "Kittany1999#"
+                   //UserName = "",
+                   //Password = ""
                 }
             };
             MailAddress FromEmail = new MailAddress("Chala.Application@gmail.com", "Chala Corporation");
